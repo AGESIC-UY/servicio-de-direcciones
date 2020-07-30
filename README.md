@@ -8,6 +8,7 @@ Es una solución que expone distitnos servicios para la consulta de direcciones 
 -swagger 2.9.2 <br/>
 
 ## Contendido del repositorio
+ * conf/SQL, script de bases de datos
  * doc, contiene la documentación del proyecto<br/>
  * src <br/>
   -scd,código de la solución<br/>
