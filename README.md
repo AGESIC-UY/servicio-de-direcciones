@@ -1,16 +1,16 @@
-# servicio-de-direcciones
-Es una solución que expone distitnos servicios para la consulta de direcciones georáfiacs del Uruguay.
+# Servicio de direcciones
+Es una solución que expone distitnos servicios para la consulta de direcciones geográficas del Uruguay.
 
 
 ## Tecnologías Utilizadas
--Springboot 2.3.2
--Postgre 11 (Postgis 2.3.11)
--swagger 2.9.2
+1.Springboot 2.3.2
+2.Postgre 11 (Postgis 2.3.11)
+3.swagger 2.9.2
 
 ## Contendido del repositorio
--doc 
+1.doc 
 Contiene la documentación del proyecto
--src 
+2.src 
   -scd 
 		Código de la solución
   -direccionesuy-client 
