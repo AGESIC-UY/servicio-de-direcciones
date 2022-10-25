@@ -1,0 +1,49 @@
+{
+	"id": "f865c676-83a5-4775-9489-00adc9f49523",
+	"name": "Test",
+	"values": [
+		{
+			"key": "URL",
+			"value": "http://localhost:8090",
+			"enabled": true
+		},
+		{
+			"key": "tRuta",
+			"value": "2000",
+			"enabled": true
+		},
+		{
+			"key": "tCandidatesPOI",
+			"value": "300",
+			"enabled": true
+		},
+		{
+			"key": "tCandidatesManza",
+			"value": "400",
+			"enabled": true
+		},
+		{
+			"key": "tCandidatesPortal",
+			"value": "200",
+			"enabled": true
+		},
+		{
+			"key": "tCandidatesCalle",
+			"value": "300",
+			"enabled": true
+		},
+		{
+			"key": "tCandidatesEsquina",
+			"value": "2000",
+			"enabled": true
+		},
+		{
+			"key": "tReverseGeocode",
+			"value": "200",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2020-03-17T12:20:51.417Z",
+	"_postman_exported_using": "Postman/7.20.1"
+}

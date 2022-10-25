@@ -1,0 +1,1760 @@
+{
+	"info": {
+		"_postman_id": "a19d2837-d70e-4b0c-94c7-bc1c791f3cea",
+		"name": "UruguayRemoto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "v0",
+			"item": [
+				{
+					"name": "SugerenciaCalleCompleta",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "15875ec2-1800-415a-8676-3b296978e17f",
+								"exec": [
+									"pm.test(\"Body is correct\", function () {",
+									"    pm.response.to.have.body(\"[{\\\"calle\\\":\\\"YAGUARON\\\",\\\"departamento\\\":\\\"MONTEVIDEO\\\",\\\"localidad\\\":\\\"MONTEVIDEO\\\",\\\"idCalle\\\":9372,\\\"idLocalidad\\\":3180},{\\\"calle\\\":\\\"YAGUARI\\\",\\\"departamento\\\":\\\"MONTEVIDEO\\\",\\\"localidad\\\":\\\"MONTEVIDEO\\\",\\\"idCalle\\\":9806,\\\"idLocalidad\\\":3180}]\");",
+									"    ",
+									"    pm.test(\"Body contains YAGUARON\", function () {",
+									"        pm.expect(pm.response.text()).to.include(\"YAGUARON\");",
+									"    });",
+									"    ",
+									"    ",
+									"    pm.test(\"Response time is less than 100ms\", function () {",
+									"        pm.expect(pm.response.responseTime).to.be.below(100);",
+									"    });",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v0/geocode/SugerenciaCalleCompleta?entrada=yaguaron, montevideo, montevideo&limit=10",
+							"protocol": "https",
+							"host": [
+								"callejerouy-direcciones","agesic","gub","uy"
+							],
+							"port": "",
+							"path": [
+								"api",
+								"v0",
+								"geocode",
+								"SugerenciaCalleCompleta"
+							],
+							"query": [
+								{
+									"key": "entrada",
+									"value": "yaguaron, montevideo, montevideo"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SugerenciaLocalidades",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c1ffde82-414b-4df8-9878-f3654e80a827",
+								"exec": [
+									"pm.test(\"Body is correct\", function () {",
+									"    pm.response.to.have.body(\"[{\\\"id\\\":383,\\\"nombre\\\":\\\"25 DE AGOSTO\\\",\\\"codigoPostal\\\":95461,\\\"alias\\\":[]},{\\\"id\\\":384,\\\"nombre\\\":\\\"25 DE MAYO\\\",\\\"codigoPostal\\\":95161,\\\"alias\\\":[]},{\\\"id\\\":672,\\\"nombre\\\":\\\"ALEJANDRO GALLINAL\\\",\\\"codigoPostal\\\":96561,\\\"alias\\\":[{\\\"id\\\":231,\\\"nombre\\\":\\\"CERRO COLORADO\\\"}]},{\\\"id\\\":1543,\\\"nombre\\\":\\\"ARRAYAN\\\",\\\"codigoPostal\\\":34298,\\\"alias\\\":[]},{\\\"id\\\":1571,\\\"nombre\\\":\\\"ARROYO CHAMIZO\\\",\\\"codigoPostal\\\":96298,\\\"alias\\\":[]},{\\\"id\\\":1585,\\\"nombre\\\":\\\"ARROYO DE LOS NEGROS\\\",\\\"codigoPostal\\\":94198,\\\"alias\\\":[]},{\\\"id\\\":1570,\\\"nombre\\\":\\\"ARROYO LATORRE\\\",\\\"codigoPostal\\\":96298,\\\"alias\\\":[]},{\\\"id\\\":1536,\\\"nombre\\\":\\\"ARROYO MONZON\\\",\\\"codigoPostal\\\":98098,\\\"alias\\\":[]},{\\\"id\\\":1642,\\\"nombre\\\":\\\"ARROYO PELADO\\\",\\\"codigoPostal\\\":95598,\\\"alias\\\":[]},{\\\"id\\\":1559,\\\"nombre\\\":\\\"ARTEAGA\\\",\\\"codigoPostal\\\":96598,\\\"alias\\\":[]},{\\\"id\\\":1576,\\\"nombre\\\":\\\"BARRA MOLLES DEL TIMOTE\\\",\\\"codigoPostal\\\":98098,\\\"alias\\\":[]},{\\\"id\\\":1554,\\\"nombre\\\":\\\"BARRA SAUCE DE MANSAVILLAGRA\\\",\\\"codigoPostal\\\":98098,\\\"alias\\\":[]},{\\\"id\\\":857,\\\"nombre\\\":\\\"BERRONDO\\\",\\\"codigoPostal\\\":94070,\\\"alias\\\":[]},{\\\"id\\\":1604,\\\"nombre\\\":\\\"CALLERI\\\",\\\"codigoPostal\\\":94198,\\\"alias\\\":[]},{\\\"id\\\":1634,\\\"nombre\\\":\\\"CANDIL\\\",\\\"codigoPostal\\\":94070,\\\"alias\\\":[]},{\\\"id\\\":855,\\\"nombre\\\":\\\"CAPILLA DEL SAUCE\\\",\\\"codigoPostal\\\":98001,\\\"alias\\\":[]},{\\\"id\\\":69,\\\"nombre\\\":\\\"CARDAL\\\",\\\"codigoPostal\\\":95261,\\\"alias\\\":[]},{\\\"id\\\":594,\\\"nombre\\\":\\\"CASERIO LA FUNDACION\\\",\\\"codigoPostal\\\":94198,\\\"alias\\\":[]},{\\\"id\\\":689,\\\"nombre\\\":\\\"CASUPA\\\",\\\"codigoPostal\\\":96392,\\\"alias\\\":[]},{\\\"id\\\":1620,\\\"nombre\\\":\\\"CERRO DE LA MACANA\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":1593,\\\"nombre\\\":\\\"CERROS DE FLORIDA\\\",\\\"codigoPostal\\\":94070,\\\"alias\\\":[]},{\\\"id\\\":1627,\\\"nombre\\\":\\\"CHACRAS DE FLORIDA\\\",\\\"codigoPostal\\\":94070,\\\"alias\\\":[]},{\\\"id\\\":1630,\\\"nombre\\\":\\\"CHACRAS DEL PINTADO\\\",\\\"codigoPostal\\\":94070,\\\"alias\\\":[]},{\\\"id\\\":528,\\\"nombre\\\":\\\"CHAMIZO\\\",\\\"codigoPostal\\\":96161,\\\"alias\\\":[]},{\\\"id\\\":1600,\\\"nombre\\\":\\\"CHAMIZO CHICO\\\",\\\"codigoPostal\\\":96198,\\\"alias\\\":[]},{\\\"id\\\":1556,\\\"nombre\\\":\\\"CHILCAS\\\",\\\"codigoPostal\\\":98098,\\\"alias\\\":[{\\\"id\\\":842,\\\"nombre\\\":\\\"LAS CHILCAS\\\"}]},{\\\"id\\\":1557,\\\"nombre\\\":\\\"CHINGOLAS\\\",\\\"codigoPostal\\\":98098,\\\"alias\\\":[]},{\\\"id\\\":1592,\\\"nombre\\\":\\\"COLONIA SANCHEZ\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":3167,\\\"nombre\\\":\\\"COLONIA TREINTA Y TRES ORIENTALES\\\",\\\"codigoPostal\\\":91191,\\\"alias\\\":[]},{\\\"id\\\":1619,\\\"nombre\\\":\\\"CORRAL DE PIEDRA\\\",\\\"codigoPostal\\\":94198,\\\"alias\\\":[]},{\\\"id\\\":1598,\\\"nombre\\\":\\\"COSTA DE ARIAS\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":1551,\\\"nombre\\\":\\\"COSTA DE ILLESCAS\\\",\\\"codigoPostal\\\":98098,\\\"alias\\\":[]},{\\\"id\\\":1589,\\\"nombre\\\":\\\"COSTA DE LA CRUZ\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":1611,\\\"nombre\\\":\\\"COSTA DE PARANA\\\",\\\"codigoPostal\\\":94198,\\\"alias\\\":[]},{\\\"id\\\":1577,\\\"nombre\\\":\\\"COSTA DEL TALA\\\",\\\"codigoPostal\\\":94198,\\\"alias\\\":[]},{\\\"id\\\":1595,\\\"nombre\\\":\\\"COSTAS DE ARIAS\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":1601,\\\"nombre\\\":\\\"COSTAS DE CHAMIZO\\\",\\\"codigoPostal\\\":96198,\\\"alias\\\":[]},{\\\"id\\\":1596,\\\"nombre\\\":\\\"COSTAS DE CHAMIZO GRANDE\\\",\\\"codigoPostal\\\":96298,\\\"alias\\\":[]},{\\\"id\\\":1605,\\\"nombre\\\":\\\"COSTAS DE MACIEL\\\",\\\"codigoPostal\\\":94198,\\\"alias\\\":[]},{\\\"id\\\":1640,\\\"nombre\\\":\\\"COSTAS DE SANTA LUCIA CHICO\\\",\\\"codigoPostal\\\":95298,\\\"alias\\\":[]},{\\\"id\\\":1568,\\\"nombre\\\":\\\"COSTAS DEL AMARILLO\\\",\\\"codigoPostal\\\":96361,\\\"alias\\\":[]},{\\\"id\\\":1625,\\\"nombre\\\":\\\"COSTAS DEL PINTADO\\\",\\\"codigoPostal\\\":94070,\\\"alias\\\":[]},{\\\"id\\\":1574,\\\"nombre\\\":\\\"COSTAS DEL SANTA LUCIA GRANDE\\\",\\\"codigoPostal\\\":96198,\\\"alias\\\":[]},{\\\"id\\\":1613,\\\"nombre\\\":\\\"CUCHILLA SANTO DOMINGO\\\",\\\"codigoPostal\\\":94198,\\\"alias\\\":[]},{\\\"id\\\":1579,\\\"nombre\\\":\\\"DR. A. GALLINAL\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":208,\\\"nombre\\\":\\\"ESTACION CAPILLA DEL SAUCE\\\",\\\"codigoPostal\\\":98001,\\\"alias\\\":[]},{\\\"id\\\":149,\\\"nombre\\\":\\\"FERRER\\\",\\\"codigoPostal\\\":98098,\\\"alias\\\":[]},{\\\"id\\\":82,\\\"nombre\\\":\\\"FLORIDA\\\",\\\"codigoPostal\\\":94092,\\\"alias\\\":[]},{\\\"id\\\":699,\\\"nombre\\\":\\\"FRAY MARCOS\\\",\\\"codigoPostal\\\":96261,\\\"alias\\\":[]},{\\\"id\\\":657,\\\"nombre\\\":\\\"GOÑI\\\",\\\"codigoPostal\\\":97070,\\\"alias\\\":[]},{\\\"id\\\":1581,\\\"nombre\\\":\\\"HERNANDARIAS\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":536,\\\"nombre\\\":\\\"INDEPENDENCIA\\\",\\\"codigoPostal\\\":95361,\\\"alias\\\":[]},{\\\"id\\\":1629,\\\"nombre\\\":\\\"JUNCAL\\\",\\\"codigoPostal\\\":94070,\\\"alias\\\":[]},{\\\"id\\\":1608,\\\"nombre\\\":\\\"LA CIMBRA\\\",\\\"codigoPostal\\\":94198,\\\"alias\\\":[]},{\\\"id\\\":206,\\\"nombre\\\":\\\"LA CRUZ\\\",\\\"codigoPostal\\\":94004,\\\"alias\\\":[]},{\\\"id\\\":1572,\\\"nombre\\\":\\\"LA ESCOBILLA\\\",\\\"codigoPostal\\\":96298,\\\"alias\\\":[]},{\\\"id\\\":926,\\\"nombre\\\":\\\"LA MACANA\\\",\\\"codigoPostal\\\":94070,\\\"alias\\\":[]},{\\\"id\\\":1548,\\\"nombre\\\":\\\"LA PALMA\\\",\\\"codigoPostal\\\":98098,\\\"alias\\\":[]},{\\\"id\\\":1541,\\\"nombre\\\":\\\"LA VICTORIA\\\",\\\"codigoPostal\\\":98098,\\\"alias\\\":[]},{\\\"id\\\":1597,\\\"nombre\\\":\\\"LAS PIEDRITAS\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":1558,\\\"nombre\\\":\\\"MANSAVILLAGRA\\\",\\\"codigoPostal\\\":98098,\\\"alias\\\":[]},{\\\"id\\\":99,\\\"nombre\\\":\\\"MENDOZA CHICO\\\",\\\"codigoPostal\\\":95661,\\\"alias\\\":[]},{\\\"id\\\":410,\\\"nombre\\\":\\\"MENDOZA GRANDE\\\",\\\"codigoPostal\\\":95561,\\\"alias\\\":[]},{\\\"id\\\":1538,\\\"nombre\\\":\\\"MOLLES DEL PESCADO\\\",\\\"codigoPostal\\\":34298,\\\"alias\\\":[]},{\\\"id\\\":1580,\\\"nombre\\\":\\\"MOLLES DEL TIMOTE\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":658,\\\"nombre\\\":\\\"MONTECORAL\\\",\\\"codigoPostal\\\":98003,\\\"alias\\\":[{\\\"id\\\":823,\\\"nombre\\\":\\\"ESTACION MONTECORAL\\\"}]},{\\\"id\\\":860,\\\"nombre\\\":\\\"NICO PEREZ\\\",\\\"codigoPostal\\\":34292,\\\"alias\\\":[]},{\\\"id\\\":1582,\\\"nombre\\\":\\\"PALERMO\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[{\\\"id\\\":826,\\\"nombre\\\":\\\"ESTACION PALERMO\\\"}]},{\\\"id\\\":1583,\\\"nombre\\\":\\\"PANTANOSO DE CASTRO\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":1635,\\\"nombre\\\":\\\"PASO CALLEROS\\\",\\\"codigoPostal\\\":94070,\\\"alias\\\":[]},{\\\"id\\\":1632,\\\"nombre\\\":\\\"PASO DE LOS NOVILLOS\\\",\\\"codigoPostal\\\":95198,\\\"alias\\\":[]},{\\\"id\\\":1544,\\\"nombre\\\":\\\"PASO REAL DE MANSAVILLAGRA\\\",\\\"codigoPostal\\\":96598,\\\"alias\\\":[]},{\\\"id\\\":1631,\\\"nombre\\\":\\\"PASO VELA\\\",\\\"codigoPostal\\\":95198,\\\"alias\\\":[]},{\\\"id\\\":1563,\\\"nombre\\\":\\\"PIEDRA CAMPANA\\\",\\\"codigoPostal\\\":96498,\\\"alias\\\":[]},{\\\"id\\\":1610,\\\"nombre\\\":\\\"PIEDRAS COLORADAS\\\",\\\"codigoPostal\\\":94198,\\\"alias\\\":[]},{\\\"id\\\":843,\\\"nombre\\\":\\\"PINTADO\\\",\\\"codigoPostal\\\":94198,\\\"alias\\\":[{\\\"id\\\":882,\\\"nombre\\\":\\\"BARCELO\\\"},{\\\"id\\\":883,\\\"nombre\\\":\\\"ESTACION PINTADO\\\"}]},{\\\"id\\\":583,\\\"nombre\\\":\\\"POLANCO DEL YI\\\",\\\"codigoPostal\\\":94198,\\\"alias\\\":[]},{\\\"id\\\":1537,\\\"nombre\\\":\\\"PUEBLO DE LOS MOROCHOS\\\",\\\"codigoPostal\\\":35198,\\\"alias\\\":[]},{\\\"id\\\":1643,\\\"nombre\\\":\\\"PUENTE DE MENDOZA\\\",\\\"codigoPostal\\\":95598,\\\"alias\\\":[]},{\\\"id\\\":1626,\\\"nombre\\\":\\\"PUNTAS DE CALLEROS\\\",\\\"codigoPostal\\\":94070,\\\"alias\\\":[]},{\\\"id\\\":1546,\\\"nombre\\\":\\\"PUNTAS DE CHAMAME\\\",\\\"codigoPostal\\\":96598,\\\"alias\\\":[]},{\\\"id\\\":1566,\\\"nombre\\\":\\\"PUNTAS DE CHAMIZO\\\",\\\"codigoPostal\\\":96398,\\\"alias\\\":[]},{\\\"id\\\":1542,\\\"nombre\\\":\\\"PUNTAS DE ILLESCAS\\\",\\\"codigoPostal\\\":34298,\\\"alias\\\":[]},{\\\"id\\\":1567,\\\"nombre\\\":\\\"PUNTAS DE LA ESCOBILLA\\\",\\\"codigoPostal\\\":96298,\\\"alias\\\":[]},{\\\"id\\\":207,\\\"nombre\\\":\\\"PUNTAS DE MACIEL\\\",\\\"codigoPostal\\\":94101,\\\"alias\\\":[]},{\\\"id\\\":1545,\\\"nombre\\\":\\\"PUNTAS DE MANSAVILLAGRA\\\",\\\"codigoPostal\\\":96598,\\\"alias\\\":[]},{\\\"id\\\":1612,\\\"nombre\\\":\\\"PUNTAS DE SARANDI\\\",\\\"codigoPostal\\\":94198,\\\"alias\\\":[]},{\\\"id\\\":1616,\\\"nombre\\\":\\\"PUNTAS DE SAUCE DE MACIEL\\\",\\\"codigoPostal\\\":94198,\\\"alias\\\":[]},{\\\"id\\\":1573,\\\"nombre\\\":\\\"PUNTAS DEL ARROYO LATORRE\\\",\\\"codigoPostal\\\":96298,\\\"alias\\\":[]},{\\\"id\\\":856,\\\"nombre\\\":\\\"REBOLEDO\\\",\\\"codigoPostal\\\":96461,\\\"alias\\\":[]},{\\\"id\\\":1602,\\\"nombre\\\":\\\"RINCON DE LOS CAMILOS\\\",\\\"codigoPostal\\\":97098,\\\"alias\\\":[]},{\\\"id\\\":1641,\\\"nombre\\\":\\\"RINCON DE VIGNOLI\\\",\\\"codigoPostal\\\":95598,\\\"alias\\\":[]},{\\\"id\\\":1550,\\\"nombre\\\":\\\"RINCON SAUCE DEL YI\\\",\\\"codigoPostal\\\":98098,\\\"alias\\\":[]},{\\\"id\\\":798,\\\"nombre\\\":\\\"SAN GABRIEL\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":1587,\\\"nombre\\\":\\\"SAN GERONIMO\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":1594,\\\"nombre\\\":\\\"SAN JUAN\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":1560,\\\"nombre\\\":\\\"SAN PEDRO DE TIMOTE\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":1555,\\\"nombre\\\":\\\"SANTA CLARA\\\",\\\"codigoPostal\\\":98098,\\\"alias\\\":[]},{\\\"id\\\":1621,\\\"nombre\\\":\\\"SANTA TERESA\\\",\\\"codigoPostal\\\":94070,\\\"alias\\\":[]},{\\\"id\\\":847,\\\"nombre\\\":\\\"SARANDI GRANDE\\\",\\\"codigoPostal\\\":94192,\\\"alias\\\":[]},{\\\"id\\\":1615,\\\"nombre\\\":\\\"SAUCE DE MACIEL\\\",\\\"codigoPostal\\\":94198,\\\"alias\\\":[]},{\\\"id\\\":1603,\\\"nombre\\\":\\\"SAUCE DE VILLANUEVA\\\",\\\"codigoPostal\\\":97098,\\\"alias\\\":[]},{\\\"id\\\":302,\\\"nombre\\\":\\\"SAUCE DEL YI\\\",\\\"codigoPostal\\\":97098,\\\"alias\\\":[]},{\\\"id\\\":1549,\\\"nombre\\\":\\\"TABARE\\\",\\\"codigoPostal\\\":98091,\\\"alias\\\":[]},{\\\"id\\\":1578,\\\"nombre\\\":\\\"TALA DE CASTRO\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":1607,\\\"nombre\\\":\\\"TALA DE MACIEL\\\",\\\"codigoPostal\\\":94198,\\\"alias\\\":[]},{\\\"id\\\":1588,\\\"nombre\\\":\\\"TALITA\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":1586,\\\"nombre\\\":\\\"TORNERO\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":1590,\\\"nombre\\\":\\\"URIOSTE\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]},{\\\"id\\\":1569,\\\"nombre\\\":\\\"VIGNOLI\\\",\\\"codigoPostal\\\":96398,\\\"alias\\\":[]},{\\\"id\\\":1614,\\\"nombre\\\":\\\"VILLA HIPICA\\\",\\\"codigoPostal\\\":94161,\\\"alias\\\":[]},{\\\"id\\\":1624,\\\"nombre\\\":\\\"VILLA VIEJA\\\",\\\"codigoPostal\\\":94098,\\\"alias\\\":[]}]\");",
+									"    ",
+									"    ",
+									"    pm.test(\"Response time is less than 200ms\", function () {",
+									"        pm.expect(pm.response.responseTime).to.be.below(200);",
+									"    });",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v0/geocode/localidades?alias=true&departamento=florida",
+							"protocol": "https",
+							"host": [
+								"callejerouy-direcciones","agesic","gub","uy"
+							],
+							"port": "",
+							"path": [
+								"api",
+								"v0",
+								"geocode",
+								"localidades"
+							],
+							"query": [
+								{
+									"key": "alias",
+									"value": "true"
+								},
+								{
+									"key": "departamento",
+									"value": "florida"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SugerenciaCalleCompleta 18 de Julio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v0/geocode/SugerenciaCalleCompleta?entrada=18 de Julio, montevideo, montevideo&limit=10",
+							"protocol": "https",
+							"host": [
+								"callejerouy-direcciones","agesic","gub","uy"
+							],
+							"port": "",
+							"path": [
+								"api",
+								"v0",
+								"geocode",
+								"SugerenciaCalleCompleta"
+							],
+							"query": [
+								{
+									"key": "entrada",
+									"value": "18 de Julio, montevideo, montevideo"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda Direccion (Calle) bunos airess MONTEVIDEO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v0/geocode/BusquedaDireccion?calle=bunos airess&departamento=MONTEVIDEO&localidad=MONTEVIDEO",
+							"protocol": "https",
+							"host": [
+								"callejerouy-direcciones","agesic","gub","uy"
+							],
+							"port": "",
+							"path": [
+								"api",
+								"v0",
+								"geocode",
+								"BusquedaDireccion"
+							],
+							"query": [
+								{
+									"key": "calle",
+									"value": "bunos airess"
+								},
+								{
+									"key": "departamento",
+									"value": "MONTEVIDEO"
+								},
+								{
+									"key": "localidad",
+									"value": "MONTEVIDEO"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda Direccion (Manzana y Solar)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v0/geocode/BusquedaDireccion?calle=manzana 103 solar 11&localidad=durazno&departamento=durazno",
+							"protocol": "https",
+							"host": [
+								"callejerouy-direcciones","agesic","gub","uy"
+							],
+							"port": "",
+							"path": [
+								"api",
+								"v0",
+								"geocode",
+								"BusquedaDireccion"
+							],
+							"query": [
+								{
+									"key": "calle",
+									"value": "manzana 103 solar 11"
+								},
+								{
+									"key": "localidad",
+									"value": "durazno"
+								},
+								{
+									"key": "departamento",
+									"value": "durazno"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda Direccion (Punto Inmueble) Estadio Centenario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1ad332da-413d-4fd5-9f7c-2b648c5fe4c2",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"ESTADIO CENTENARIO\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v0/geocode/BusquedaDireccion?calle=estadi centenario&localidad=montevideo&departamento=montevideo",
+							"protocol": "https",
+							"host": [
+								"callejerouy-direcciones","agesic","gub","uy"
+							],
+							"port": "",
+							"path": [
+								"api",
+								"v0",
+								"geocode",
+								"BusquedaDireccion"
+							],
+							"query": [
+								{
+									"key": "calle",
+									"value": "estadi centenario"
+								},
+								{
+									"key": "localidad",
+									"value": "montevideo"
+								},
+								{
+									"key": "departamento",
+									"value": "montevideo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda Direccion (Calle y portal) Plaza Independencia 710",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2d9db094-938d-4ec4-9a4a-4aaab6f3dcb2",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"PLAZA INDEPENDENCIA\");",
+									"    ",
+									"    pm.expect(pm.response.text()).to.include(\"710\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v0/geocode/BusquedaDireccion?calle=Plaza independencia 710&departamento=MONTEVIDEO&localidad=MONTEVIDEO",
+							"protocol": "https",
+							"host": [
+								"callejerouy-direcciones","agesic","gub","uy"
+							],
+							"port": "",
+							"path": [
+								"api",
+								"v0",
+								"geocode",
+								"BusquedaDireccion"
+							],
+							"query": [
+								{
+									"key": "calle",
+									"value": "Plaza independencia 710"
+								},
+								{
+									"key": "departamento",
+									"value": "MONTEVIDEO"
+								},
+								{
+									"key": "localidad",
+									"value": "MONTEVIDEO"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda Direccion (Calle) gral. garibaldi melo cerro largo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "fd7c7032-8fc5-4351-90ae-846e6407565d",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"CERRO LARGO\");",
+									"    ",
+									"    pm.expect(pm.response.text()).to.include(\"GARIBALDI\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v0/geocode/BusquedaDireccion?calle=gral. garibaldi&departamento=CERRO LARGO&localidad=MELO",
+							"protocol": "https",
+							"host": [
+								"callejerouy-direcciones","agesic","gub","uy"
+							],
+							"port": "",
+							"path": [
+								"api",
+								"v0",
+								"geocode",
+								"BusquedaDireccion"
+							],
+							"query": [
+								{
+									"key": "calle",
+									"value": "gral. garibaldi"
+								},
+								{
+									"key": "departamento",
+									"value": "CERRO LARGO"
+								},
+								{
+									"key": "localidad",
+									"value": "MELO"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Calle y Portal en SpringBoot. Ordoñez 20, Montevideo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f5afccc8-06eb-4e2f-a6b5-e0680fc5b3bb",
+						"exec": [
+							"pm.test(\"Encuentra CALLEyPORTAL\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"CALLEyPORTAL\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"AVENIDA JOSE BATLLE Y ORDOÑEZ 20, MONTEVIDEO, MONTEVIDEO\");",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/candidates?q=ordoñez 20, montevideo",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "ordoñez 20, montevideo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot . General Flores",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98003139-9a5e-41b6-8fd4-cf828c974349",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"AVENIDA GENERAL FLORES\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/candidates?q=FLORES&limit=10",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "FLORES"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "health",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "30d6462f-1452-4a94-bfea-d6860f96517e",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"UP\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/actuator/custom-health",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"actuator",
+						"custom-health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Avda 18 de Julio, Montevideo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "44df6d34-0409-46e6-9a17-4f3ca65033a2",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"AVENIDA DIECIOCHO DE JULIO, MONTEVIDEO, MONTEVIDEO\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/candidates?q=avda 18 de julio, montevideo, montevideo&limit=100",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "avda 18 de julio, montevideo, montevideo"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Centenario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d26f336a-4db9-41bf-8a07-65300dd4b3c3",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"ESTADIO CENTENARIO\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/candidates?q=estadio centena",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "estadio centena"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Manzana y Solar",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3eccf3ed-ec15-415b-8201-0aa383e57ffd",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"MANZANA 243 SOLAR 20\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 300ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(300);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/candidates?q=MANZANA 243 SOLAR 20, PAYSANDU, PAYSANDU&limit=100",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "MANZANA 243 SOLAR 20, PAYSANDU, PAYSANDU"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Ruta y Km",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "233ef624-1d6e-48ad-84d1-d3dedd1df262",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"RUTA 5\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 600ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(600);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/candidates?q=RUTA 5 KM. 23, TOLEDO, CANELONES&limit=100",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "RUTA 5 KM. 23, TOLEDO, CANELONES"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Palacio Legislativo (Punto Inmueble)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b210437a-7a85-4972-bd2f-0554953a6b09",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"PALACIO LEGISLATIVO\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/candidates?q=palacio&limit=100",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "palacio"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Rambla Republica del Peru",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cd02a276-e522-4179-bf62-1203632a5b7d",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"RAMBLA REPUBLICA DEL PERU\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/candidates?q=rambla republica del peru&limit=100",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "rambla republica del peru"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  plaza independencia 710",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c0ba1a73-aab6-4620-93c6-3656a0a80bbf",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"PLAZA INDEPENDENCIA 710\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/candidates?q=plaza independencia 710, montevideo, montevideo&limit=100",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "plaza independencia 710, montevideo, montevideo"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Capas Poligonales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/capasPoligonales",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"capasPoligonales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "poligono -> Portales dentro de departamento",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "64ec9f39-90cb-4610-9f6e-b25c9dae85d5",
+						"exec": [
+							"pm.test(\"Máximo numero de registros 100\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.length).eq(100);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/poligono?capa=departamento&id=1&tipoDirec=portal&limit=100",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"poligono"
+					],
+					"query": [
+						{
+							"key": "capa",
+							"value": "departamento"
+						},
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "tipoDirec",
+							"value": "portal"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  ESQUINAS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ee5617b5-d8d5-46ae-8d91-3ee64aba4b4b",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"ESQUINA\");",
+							"    ",
+							"    pm.expect(pm.response.text()).to.include(\"DIECIOCHO DE JULIO\");",
+							"    ",
+							"    pm.expect(pm.response.text()).to.include(\"JAVIER BARRIOS\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 2 segs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/candidates?q=yaguaron montevideo esquina javier bar&limit=10",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "yaguaron montevideo esquina javier bar"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates con Portal en SpringBoot ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e079340e-a255-4ae3-b42c-4af9991f531a",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"CALLEyPORTAL\");",
+							"    ",
+							"    pm.expect(pm.response.text()).to.include(\"AVENIDA JOSE BATLLE Y ORDOÑEZ 24\");",
+							"    ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/candidates?q=ordoñez 24, montevideo",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "ordoñez 24, montevideo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swagger",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ec91ae0f-81c5-4cfe-ae66-e5da0c3b9e71",
+						"exec": [
+							"pm.test(\"Status code is 200. Swagger está disponible\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/swagger-ui.html",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"swagger-ui.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reverse Geocode",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cfc00430-7d4d-4ef7-accc-bd9c1f0497b9",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"YAGUARON 1478\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/reverse?longitud=-56.1881599&latitud=-34.9032784&limit=10",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"reverse"
+					],
+					"query": [
+						{
+							"key": "longitud",
+							"value": "-56.1881599"
+						},
+						{
+							"key": "latitud",
+							"value": "-34.9032784"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find exact calle",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8a9474ee-6437-48d2-b96a-c9950908c81d",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"YAGUARON, MONTEVIDEO, MONTEVIDEO\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 100ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(100);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/find?type=calle&nomvia=YAGUARON&departamento=MONTEVIDEO&localidad=MONTEVIDEO",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"find"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "calle"
+						},
+						{
+							"key": "nomvia",
+							"value": "YAGUARON"
+						},
+						{
+							"key": "departamento",
+							"value": "MONTEVIDEO"
+						},
+						{
+							"key": "localidad",
+							"value": "MONTEVIDEO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find exact calle y portal",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "52036d45-b82a-433e-bea3-b18e142962a8",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"YAGUARON 1699\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 100ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(100);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/find?type=calle&nomvia=YAGUARON&portal=1699&departamento=MONTEVIDEO&localidad=MONTEVIDEO",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"find"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "calle"
+						},
+						{
+							"key": "nomvia",
+							"value": "YAGUARON"
+						},
+						{
+							"key": "portal",
+							"value": "1699"
+						},
+						{
+							"key": "departamento",
+							"value": "MONTEVIDEO"
+						},
+						{
+							"key": "localidad",
+							"value": "MONTEVIDEO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find exact calle y portal por ID CALLE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f5942726-9e22-495a-a0b5-fba01d97e56e",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"PLAZA INDEPENDENCIA 710\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/find?type=calle&portal=710&idcalle=8770",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"find"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "calle"
+						},
+						{
+							"key": "nomvia",
+							"value": "YAGUARON",
+							"disabled": true
+						},
+						{
+							"key": "departamento",
+							"value": "MONTEVIDEO",
+							"disabled": true
+						},
+						{
+							"key": "localidad",
+							"value": "MONTEVIDEO",
+							"disabled": true
+						},
+						{
+							"key": "portal",
+							"value": "710"
+						},
+						{
+							"key": "idcalle",
+							"value": "8770"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find exact calle por ID CALLE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "198d388a-4c46-4fa2-93d9-7d415d8dc603",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"25735\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/find?type=calle&idcalle=25735",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"find"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "calle"
+						},
+						{
+							"key": "nomvia",
+							"value": "YAGUARON",
+							"disabled": true
+						},
+						{
+							"key": "departamento",
+							"value": "MONTEVIDEO",
+							"disabled": true
+						},
+						{
+							"key": "localidad",
+							"value": "MONTEVIDEO",
+							"disabled": true
+						},
+						{
+							"key": "idcalle",
+							"value": "25735"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Esquinas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "947547b4-eb62-468f-bfb3-dd9623ec6724",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"ESQUINA\");",
+							"    ",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.length).gt(10);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 5 segs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/findEsq?idcalle=9372",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"findEsq"
+					],
+					"query": [
+						{
+							"key": "idcalle",
+							"value": "9372"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcManzaSolar",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "80a4acf3-a97c-466e-8ef5-cc475322102a",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"MANZANAySOLAR\");",
+							"    ",
+							"    pm.expect(pm.response.text()).to.include(\"MANZANA 243 SOLAR 20, PAYSANDU, PAYSANDU\");",
+							"    ",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 500 msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/direcManzaSolar?departamento=paysandu&localidad=paysandu&manzana=243&solar=20",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcManzaSolar"
+					],
+					"query": [
+						{
+							"key": "departamento",
+							"value": "paysandu"
+						},
+						{
+							"key": "localidad",
+							"value": "paysandu"
+						},
+						{
+							"key": "manzana",
+							"value": "243"
+						},
+						{
+							"key": "solar",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcPadron",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb4fff73-8fcd-4c49-830c-0b0b63e515c2",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"MANZANAySOLAR\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/direcPadron?departamento=Cerro Largo&localidad=Melo&padron=562",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcPadron"
+					],
+					"query": [
+						{
+							"key": "departamento",
+							"value": "Cerro Largo"
+						},
+						{
+							"key": "localidad",
+							"value": "Melo"
+						},
+						{
+							"key": "padron",
+							"value": "562"
+						}
+					]
+				},
+				"description": "Ojo, no encuentro nada en Montevideo!!"
+			},
+			"response": []
+		},
+		{
+			"name": "direcPuntoNotable",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5c7e6e09-caed-4df0-8f8e-58a2bbce592e",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"POI\");",
+							"    ",
+							"    pm.expect(pm.response.text()).to.include(\"CORREO\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/direcPuntoNotable?departamento=Cerro Largo&nombre=Correos",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcPuntoNotable"
+					],
+					"query": [
+						{
+							"key": "departamento",
+							"value": "Cerro Largo"
+						},
+						{
+							"key": "nombre",
+							"value": "Correos"
+						}
+					]
+				},
+				"description": "Ojo, no encuentro nada en Montevideo!!"
+			},
+			"response": []
+		},
+		{
+			"name": "Cruces con Radio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "64a797b9-94a6-40e3-ad12-c52fcdc555d9",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"ESQUINA\");",
+							"    ",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/crucesConRadio?departamento=montevideo&localidad=montevideo&calle=yaguaron&latitud=-34.89443988158456&longitud=-56.18754395221193&radio=1000&limit=200",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"crucesConRadio"
+					],
+					"query": [
+						{
+							"key": "departamento",
+							"value": "montevideo"
+						},
+						{
+							"key": "localidad",
+							"value": "montevideo"
+						},
+						{
+							"key": "calle",
+							"value": "yaguaron"
+						},
+						{
+							"key": "latitud",
+							"value": "-34.89443988158456"
+						},
+						{
+							"key": "longitud",
+							"value": "-56.18754395221193"
+						},
+						{
+							"key": "radio",
+							"value": "1000"
+						},
+						{
+							"key": "limit",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Con LOCALIDAD",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a1521823-9452-4841-91f8-40e81bb6cd60",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"CANELONES\");",
+							"    ",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 100 msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(100);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/candidates?q=Canelones, canelo&soloLocalidad=true&limit=10",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Canelones, canelo"
+						},
+						{
+							"key": "soloLocalidad",
+							"value": "true"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Yaguaron, Ciudad de la Costa, Canelones",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "28d8b0ce-6dc4-47b0-8114-5cdf045bb401",
+						"exec": [
+							"pm.test(\"Yaguaron, Ciudad de la Costa\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"YAGUARON, CIUDAD DE LA COSTA\");",
+							"    ",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://callejerouy-direcciones.agesic.gub.uy/api/v1/geocode/candidates?q=yaguaron, ciudad de la costa, canelones&limit=10",
+					"protocol": "https",
+					"host": [
+						"callejerouy-direcciones","agesic","gub","uy"
+					],
+					"port": "",
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "yaguaron, ciudad de la costa, canelones"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

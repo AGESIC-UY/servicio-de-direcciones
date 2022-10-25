@@ -1,0 +1,4 @@
+ID;ENTRADA_USUARIO
+1;cavia 2858, mvd
+2;herrera 826, durazno, dzno
+3;palacio legisislativ, montevideo, montevideo

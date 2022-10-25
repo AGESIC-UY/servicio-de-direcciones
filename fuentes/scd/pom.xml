@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.1.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>uy.agesic</groupId>
+	<artifactId>direcciones</artifactId>
+	<version>1.0.0</version>
+	<!-- For Wildfly deployment -->
+	<packaging>jar</packaging>
+	<name>AgesicDirecciones</name>
+	<description>Componente Direcciones de AGESIC Uruguay</description>
+	<!-- <configuration> -->
+	<!-- <hostname>127.0.0.1</hostname> -->
+	<!-- <port>8080</port> -->
+	<!-- <username>mkyong</username> -->
+	<!-- <password>password</password> -->
+	<!-- <name>spring4ajax.war</name> -->
+	<!-- </configuration> -->
+
+	<properties>
+		<java.version>1.8</java.version>
+		<io.springfox.version>2.9.2</io.springfox.version>
+	</properties>
+	<repositories>
+        <repository>
+           <id>central</id>
+           <url>http://central</url>
+           <releases><enabled>true</enabled></releases>
+           <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+         <repository> 
+            <id>Maven central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>true</enabled></snapshots>
+         </repository>         
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <url>http://http://nexus-direcciones.paas.red.uy/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <url>http://nexus-direcciones.paas.red.uy/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<!-- This exclusions section is needed to create a .war package and run 
+				the service in Wildfly -->
+			<!-- COMENTA ESTA PARTE PARA PRUEBGAS DE SPRING BOOT, Y DESCOMENTA CUANDO 
+				HAGAS DEPLOY EN WILDFLY -->
+			<!-- <exclusions> -->
+			<!-- <exclusion> -->
+			<!-- <groupId>org.springframework.boot</groupId> -->
+			<!-- <artifactId>spring-boot-starter-tomcat</artifactId> -->
+			<!-- </exclusion> -->
+			<!-- </exclusions> -->
+		</dependency>
+		<!-- This dependency is for Wildfly -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>me.xdrop</groupId>
+			<artifactId>fuzzywuzzy</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>4.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${io.springfox.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${io.springfox.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-text</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+  			<groupId>net.sf.geographiclib</groupId>
+     		<artifactId>GeographicLib-Java</artifactId>
+		    <version>1.50</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.7.9</version>
+			<type>maven-plugin</type>
+		</dependency>
+		<dependency>
+  			<groupId>net.minidev</groupId>
+  			<artifactId>json-smart</artifactId>
+  			<version>2.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.openlocationcode/openlocationcode -->
+		<dependency>
+		    <groupId>com.google.openlocationcode</groupId>
+		    <artifactId>openlocationcode</artifactId>
+		    <version>1.0.4</version>
+		</dependency>		
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!-- Code Coverage report generation -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.9</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>generate-code-coverage-report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+		</plugins>
+	</build>
+
+</project>

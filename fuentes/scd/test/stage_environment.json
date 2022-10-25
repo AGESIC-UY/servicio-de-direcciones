@@ -1,0 +1,59 @@
+{
+	"id": "fc1b1b48-273e-4d62-8329-4236627dd233",
+	"name": "Stage",
+	"values": [
+		{
+			"key": "URL",
+			"value": "https://callejerouy2-direccionesuy-stage.paas.red.uy",
+			"enabled": true
+		},
+		{
+			"key": "tRuta",
+			"value": "2000",
+			"enabled": true
+		},
+		{
+			"key": "tCandidatesPOI",
+			"value": "400",
+			"enabled": true
+		},
+		{
+			"key": "tCandidatesManza",
+			"value": "700",
+			"enabled": true
+		},
+		{
+			"key": "tCandidatesPortal",
+			"value": "700",
+			"enabled": true
+		},
+		{
+			"key": "tCandidatesCalle",
+			"value": "600",
+			"enabled": true
+		},
+		{
+			"key": "tCandidatesEsquina",
+			"value": "2000",
+			"enabled": true
+		},
+		{
+			"key": "response1",
+			"value": "[{\"id\":383,\"nombre\":\"25 DE AGOSTO\",\"codigoPostal\":95461,\"alias\":[]},{\"id\":384,\"nombre\":\"25 DE MAYO\",\"codigoPostal\":95161,\"alias\":[]},{\"id\":672,\"nombre\":\"ALEJANDRO GALLINAL\",\"codigoPostal\":96561,\"alias\":[{\"id\":231,\"nombre\":\"CERRO COLORADO\"}]},{\"id\":1543,\"nombre\":\"ARRAYAN\",\"codigoPostal\":34298,\"alias\":[]},{\"id\":1571,\"nombre\":\"ARROYO CHAMIZO\",\"codigoPostal\":96298,\"alias\":[]},{\"id\":1585,\"nombre\":\"ARROYO DE LOS NEGROS\",\"codigoPostal\":94198,\"alias\":[]},{\"id\":1570,\"nombre\":\"ARROYO LATORRE\",\"codigoPostal\":96298,\"alias\":[]},{\"id\":1536,\"nombre\":\"ARROYO MONZON\",\"codigoPostal\":98098,\"alias\":[]},{\"id\":1642,\"nombre\":\"ARROYO PELADO\",\"codigoPostal\":95598,\"alias\":[]},{\"id\":1559,\"nombre\":\"ARTEAGA\",\"codigoPostal\":96598,\"alias\":[]},{\"id\":1576,\"nombre\":\"BARRA MOLLES DEL TIMOTE\",\"codigoPostal\":98098,\"alias\":[]},{\"id\":1554,\"nombre\":\"BARRA SAUCE DE MANSAVILLAGRA\",\"codigoPostal\":98098,\"alias\":[]},{\"id\":857,\"nombre\":\"BERRONDO\",\"codigoPostal\":94070,\"alias\":[]},{\"id\":510,\"nombre\":\"BOLIVAR\",\"codigoPostal\":96298,\"alias\":[]},{\"id\":1604,\"nombre\":\"CALLERI\",\"codigoPostal\":94198,\"alias\":[]},{\"id\":1634,\"nombre\":\"CANDIL\",\"codigoPostal\":94070,\"alias\":[]},{\"id\":855,\"nombre\":\"CAPILLA DEL SAUCE\",\"codigoPostal\":98001,\"alias\":[]},{\"id\":69,\"nombre\":\"CARDAL\",\"codigoPostal\":95261,\"alias\":[]},{\"id\":594,\"nombre\":\"CASERIO LA FUNDACION\",\"codigoPostal\":94198,\"alias\":[]},{\"id\":689,\"nombre\":\"CASUPA\",\"codigoPostal\":96392,\"alias\":[]},{\"id\":526,\"nombre\":\"CERRO CHATO\",\"codigoPostal\":35261,\"alias\":[]},{\"id\":1620,\"nombre\":\"CERRO DE LA MACANA\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":1593,\"nombre\":\"CERROS DE FLORIDA\",\"codigoPostal\":94070,\"alias\":[]},{\"id\":1627,\"nombre\":\"CHACRAS DE FLORIDA\",\"codigoPostal\":94070,\"alias\":[]},{\"id\":1630,\"nombre\":\"CHACRAS DEL PINTADO\",\"codigoPostal\":94070,\"alias\":[]},{\"id\":528,\"nombre\":\"CHAMIZO\",\"codigoPostal\":96161,\"alias\":[]},{\"id\":1600,\"nombre\":\"CHAMIZO CHICO\",\"codigoPostal\":96198,\"alias\":[]},{\"id\":1556,\"nombre\":\"CHILCAS\",\"codigoPostal\":98098,\"alias\":[{\"id\":842,\"nombre\":\"LAS CHILCAS\"}]},{\"id\":1557,\"nombre\":\"CHINGOLAS\",\"codigoPostal\":98098,\"alias\":[]},{\"id\":1592,\"nombre\":\"COLONIA SANCHEZ\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":3167,\"nombre\":\"COLONIA TREINTA Y TRES ORIENTALES\",\"codigoPostal\":91191,\"alias\":[]},{\"id\":1619,\"nombre\":\"CORRAL DE PIEDRA\",\"codigoPostal\":94198,\"alias\":[]},{\"id\":1598,\"nombre\":\"COSTA DE ARIAS\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":1551,\"nombre\":\"COSTA DE ILLESCAS\",\"codigoPostal\":98098,\"alias\":[]},{\"id\":1589,\"nombre\":\"COSTA DE LA CRUZ\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":1577,\"nombre\":\"COSTA DEL TALA\",\"codigoPostal\":94198,\"alias\":[]},{\"id\":1611,\"nombre\":\"COSTA DE PARANA\",\"codigoPostal\":94198,\"alias\":[]},{\"id\":1595,\"nombre\":\"COSTAS DE ARIAS\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":1601,\"nombre\":\"COSTAS DE CHAMIZO\",\"codigoPostal\":96198,\"alias\":[]},{\"id\":1596,\"nombre\":\"COSTAS DE CHAMIZO GRANDE\",\"codigoPostal\":96298,\"alias\":[]},{\"id\":1568,\"nombre\":\"COSTAS DEL AMARILLO\",\"codigoPostal\":96361,\"alias\":[]},{\"id\":1625,\"nombre\":\"COSTAS DEL PINTADO\",\"codigoPostal\":94070,\"alias\":[]},{\"id\":1574,\"nombre\":\"COSTAS DEL SANTA LUCIA GRANDE\",\"codigoPostal\":96198,\"alias\":[]},{\"id\":1605,\"nombre\":\"COSTAS DE MACIEL\",\"codigoPostal\":94198,\"alias\":[]},{\"id\":1640,\"nombre\":\"COSTAS DE SANTA LUCIA CHICO\",\"codigoPostal\":95298,\"alias\":[]},{\"id\":1613,\"nombre\":\"CUCHILLA SANTO DOMINGO\",\"codigoPostal\":94198,\"alias\":[]},{\"id\":1579,\"nombre\":\"DR. A. GALLINAL\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":208,\"nombre\":\"ESTACION CAPILLA DEL SAUCE\",\"codigoPostal\":98001,\"alias\":[]},{\"id\":149,\"nombre\":\"FERRER\",\"codigoPostal\":98098,\"alias\":[]},{\"id\":82,\"nombre\":\"FLORIDA\",\"codigoPostal\":94092,\"alias\":[]},{\"id\":699,\"nombre\":\"FRAY MARCOS\",\"codigoPostal\":96261,\"alias\":[]},{\"id\":657,\"nombre\":\"GOÑI\",\"codigoPostal\":97070,\"alias\":[]},{\"id\":1581,\"nombre\":\"HERNANDARIAS\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":665,\"nombre\":\"ILLESCAS\",\"codigoPostal\":34298,\"alias\":[]},{\"id\":536,\"nombre\":\"INDEPENDENCIA\",\"codigoPostal\":95361,\"alias\":[]},{\"id\":927,\"nombre\":\"JOSE BATLLE Y ORDOÑEZ\",\"codigoPostal\":34292,\"alias\":[{\"id\":933,\"nombre\":\"JOSE BATLLE Y ORDONEZ\"}]},{\"id\":1629,\"nombre\":\"JUNCAL\",\"codigoPostal\":94070,\"alias\":[]},{\"id\":1608,\"nombre\":\"LA CIMBRA\",\"codigoPostal\":94198,\"alias\":[]},{\"id\":206,\"nombre\":\"LA CRUZ\",\"codigoPostal\":94004,\"alias\":[]},{\"id\":1572,\"nombre\":\"LA ESCOBILLA\",\"codigoPostal\":96298,\"alias\":[]},{\"id\":926,\"nombre\":\"LA MACANA\",\"codigoPostal\":94070,\"alias\":[]},{\"id\":1548,\"nombre\":\"LA PALMA\",\"codigoPostal\":98098,\"alias\":[]},{\"id\":1597,\"nombre\":\"LAS PIEDRITAS\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":1541,\"nombre\":\"LA VICTORIA\",\"codigoPostal\":98098,\"alias\":[]},{\"id\":1558,\"nombre\":\"MANSAVILLAGRA\",\"codigoPostal\":98098,\"alias\":[]},{\"id\":99,\"nombre\":\"MENDOZA CHICO\",\"codigoPostal\":95661,\"alias\":[]},{\"id\":410,\"nombre\":\"MENDOZA GRANDE\",\"codigoPostal\":95561,\"alias\":[]},{\"id\":1538,\"nombre\":\"MOLLES DEL PESCADO\",\"codigoPostal\":34298,\"alias\":[]},{\"id\":1580,\"nombre\":\"MOLLES DEL TIMOTE\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":658,\"nombre\":\"MONTECORAL\",\"codigoPostal\":98003,\"alias\":[{\"id\":823,\"nombre\":\"ESTACION MONTECORAL\"}]},{\"id\":860,\"nombre\":\"NICO PEREZ\",\"codigoPostal\":34292,\"alias\":[]},{\"id\":1582,\"nombre\":\"PALERMO\",\"codigoPostal\":94098,\"alias\":[{\"id\":826,\"nombre\":\"ESTACION PALERMO\"}]},{\"id\":1583,\"nombre\":\"PANTANOSO DE CASTRO\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":1635,\"nombre\":\"PASO CALLEROS\",\"codigoPostal\":94070,\"alias\":[]},{\"id\":1632,\"nombre\":\"PASO DE LOS NOVILLOS\",\"codigoPostal\":95198,\"alias\":[]},{\"id\":1544,\"nombre\":\"PASO REAL DE MANSAVILLAGRA\",\"codigoPostal\":96598,\"alias\":[]},{\"id\":1631,\"nombre\":\"PASO VELA\",\"codigoPostal\":95198,\"alias\":[]},{\"id\":1563,\"nombre\":\"PIEDRA CAMPANA\",\"codigoPostal\":96498,\"alias\":[]},{\"id\":1610,\"nombre\":\"PIEDRAS COLORADAS\",\"codigoPostal\":94198,\"alias\":[]},{\"id\":843,\"nombre\":\"PINTADO\",\"codigoPostal\":94198,\"alias\":[{\"id\":882,\"nombre\":\"BARCELO\"},{\"id\":883,\"nombre\":\"ESTACION PINTADO\"}]},{\"id\":583,\"nombre\":\"POLANCO DEL YI\",\"codigoPostal\":94198,\"alias\":[]},{\"id\":1537,\"nombre\":\"PUEBLO DE LOS MOROCHOS\",\"codigoPostal\":35198,\"alias\":[]},{\"id\":1643,\"nombre\":\"PUENTE DE MENDOZA\",\"codigoPostal\":95598,\"alias\":[]},{\"id\":1626,\"nombre\":\"PUNTAS DE CALLEROS\",\"codigoPostal\":94070,\"alias\":[]},{\"id\":1546,\"nombre\":\"PUNTAS DE CHAMAME\",\"codigoPostal\":96598,\"alias\":[]},{\"id\":1566,\"nombre\":\"PUNTAS DE CHAMIZO\",\"codigoPostal\":96398,\"alias\":[]},{\"id\":1542,\"nombre\":\"PUNTAS DE ILLESCAS\",\"codigoPostal\":34298,\"alias\":[]},{\"id\":1567,\"nombre\":\"PUNTAS DE LA ESCOBILLA\",\"codigoPostal\":96298,\"alias\":[]},{\"id\":1573,\"nombre\":\"PUNTAS DEL ARROYO LATORRE\",\"codigoPostal\":96298,\"alias\":[]},{\"id\":207,\"nombre\":\"PUNTAS DE MACIEL\",\"codigoPostal\":94101,\"alias\":[]},{\"id\":1545,\"nombre\":\"PUNTAS DE MANSAVILLAGRA\",\"codigoPostal\":96598,\"alias\":[]},{\"id\":1612,\"nombre\":\"PUNTAS DE SARANDI\",\"codigoPostal\":94198,\"alias\":[]},{\"id\":1616,\"nombre\":\"PUNTAS DE SAUCE DE MACIEL\",\"codigoPostal\":94198,\"alias\":[]},{\"id\":856,\"nombre\":\"REBOLEDO\",\"codigoPostal\":96461,\"alias\":[]},{\"id\":1602,\"nombre\":\"RINCON DE LOS CAMILOS\",\"codigoPostal\":97098,\"alias\":[]},{\"id\":1641,\"nombre\":\"RINCON DE VIGNOLI\",\"codigoPostal\":95598,\"alias\":[]},{\"id\":1550,\"nombre\":\"RINCON SAUCE DEL YI\",\"codigoPostal\":98098,\"alias\":[]},{\"id\":798,\"nombre\":\"SAN GABRIEL\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":1587,\"nombre\":\"SAN GERONIMO\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":1594,\"nombre\":\"SAN JUAN\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":1560,\"nombre\":\"SAN PEDRO DE TIMOTE\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":406,\"nombre\":\"SAN RAMON\",\"codigoPostal\":91192,\"alias\":[]},{\"id\":1555,\"nombre\":\"SANTA CLARA\",\"codigoPostal\":98098,\"alias\":[]},{\"id\":396,\"nombre\":\"SANTA LUCIA\",\"codigoPostal\":90292,\"alias\":[]},{\"id\":1621,\"nombre\":\"SANTA TERESA\",\"codigoPostal\":94070,\"alias\":[]},{\"id\":64,\"nombre\":\"SARANDI DEL YI\",\"codigoPostal\":98092,\"alias\":[]},{\"id\":847,\"nombre\":\"SARANDI GRANDE\",\"codigoPostal\":94192,\"alias\":[]},{\"id\":302,\"nombre\":\"SAUCE DEL YI\",\"codigoPostal\":97098,\"alias\":[]},{\"id\":1615,\"nombre\":\"SAUCE DE MACIEL\",\"codigoPostal\":94198,\"alias\":[]},{\"id\":1603,\"nombre\":\"SAUCE DE VILLANUEVA\",\"codigoPostal\":97098,\"alias\":[]},{\"id\":1549,\"nombre\":\"TABARE\",\"codigoPostal\":98091,\"alias\":[]},{\"id\":1578,\"nombre\":\"TALA DE CASTRO\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":1607,\"nombre\":\"TALA DE MACIEL\",\"codigoPostal\":94198,\"alias\":[]},{\"id\":1588,\"nombre\":\"TALITA\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":1586,\"nombre\":\"TORNERO\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":1590,\"nombre\":\"URIOSTE\",\"codigoPostal\":94098,\"alias\":[]},{\"id\":217,\"nombre\":\"VALENTINES\",\"codigoPostal\":35198,\"alias\":[]},{\"id\":1569,\"nombre\":\"VIGNOLI\",\"codigoPostal\":96398,\"alias\":[]},{\"id\":1614,\"nombre\":\"VILLA HIPICA\",\"codigoPostal\":94161,\"alias\":[]},{\"id\":1624,\"nombre\":\"VILLA VIEJA\",\"codigoPostal\":94098,\"alias\":[]}]",
+			"enabled": true
+		},
+		{
+			"key": "tReverseGeocode",
+			"value": "400",
+			"enabled": true
+		},
+		{
+			"key": "tFindCalle",
+			"value": "500",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2020-03-20T08:54:07.527Z",
+	"_postman_exported_using": "Postman/7.20.1"
+}

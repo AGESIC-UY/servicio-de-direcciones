@@ -1,0 +1,88 @@
+ID|DEPARTAMENTO|LOCALIDAD|DIRECCION|YOUTRACK|OBSERVACIONES|TIPO PRUEBA
+1|MONTEVIDEO|MONTEVIDEO|3(MILLAN Y LECOCQ) 853 A.210|ver observaciones||Entidad Colectiva
+2|MONTEVIDEO|MONTEVIDEO|3 873 A.309 ESQ.COMPLEJO MILLAN Y LECOCQ|ver observaciones||Calle - Nro
+3|MONTEVIDEO|MONTEVIDEO|6 824 ALTO.107 - COMPLEJO MILLAN Y LECOCQ|youtrack tsubasa 19||Calle - Nro
+4|MONTEVIDEO|MONTEVIDEO|SAN 13 4575 BLOCK 14|youtrack tsubasa 19||Calle - Nro
+5|MONTEVIDEO|MONTEVIDEO|SAN 3 MILLAN Y RAFFO 4575|youtrack tsubasa 19||Calle - Nro
+6|MONTEVIDEO|MONTEVIDEO|AV ITALIA HOSPITAL DE CLINICAS Piso 1|youtrack tsubasa 34||Punto Notable
+7|MONTEVIDEO|MONTEVIDEO|COLMAN 4625|youtrack tsubasa 37 49||Calle - Nro
+8|ROCHA|PUNTA DEL DIABLO|CALLE 1 4920|youtrack tsubasa 20||Calle - Nro
+9|PAYSANDU|PAYSANDU|33 ORIENTALES MANZANA 243 SOLAR 15|youtrack Geopostal 8||Manzana - Solar
+10|PAYSANDU|PAYSANDU|33 ORIENTALES MANZANA 243 SOLAR 25|youtrack Geopostal 8||Manzana - Solar
+11|PAYSANDU|PAYSANDU|MANZANA 243 SOLAR 25|youtrack Geopostal 8||Manzana - Solar
+12|ROCHA|S LUIS|SIN DIRECCION|youtrack Tsubasa 27 49||Funcionalidad
+13|MOTEVIDEO|MONTEVIDEO|AVDA. ITALIA HOSPITAL DE CLINICAS PISO 1B|youtrack tsubasa 34||Punto Notable
+14|MOTEVIDEO|MONTEVIDEO|AVDA. ITALIA HOSPITAL DE CLINICAS|youtrack tsubasa 34||Punto Notable
+15|MOTEVIDEO|MOTEVIDEO|AVDA. ITALIA HOSPITAL DE CLINICAS HALL CENTRAL|youtrack tsubasa 34||Punto Notable
+16|MONTEVIDEO|MONTEVIDEO|SAN 3 MILLAN Y RAFFO 4575|youtrack tsubasa 19||Entidad Colectiva
+17|MONTEVIDEO|MONTEVIDEO|CASTELLANOS PEREZ 1488|youtrack tsubasa 26||Calle - Nro
+18|MONTEVIDEO|MONTEVIDEO|PEREZ CASTELLANOS 1488|youtrack tsubasa 26||Calle - Nro
+19|MONTEBIDEO|MONTEBIDEO|PERNAZ 2575|youtrack tsubasa 24||Calle - Nro
+20|MONTEVIDEO|MONTEVIDEO|CASTELLANOS, PEREZ 1488|youtrack tsubasa 26||Calle - Nro
+21|MOMTEBIDEO|MOMTEBIDEO|SALTEREIN 1322|youtrack tsubasa 24||Calle - Nro
+22|RIA MEGRO|YOUNJ|SORRILLA DE NARTIN 3173|youtrack tsubasa 24||Calle - Nro
+23|COLOMIA|COLOMIA|SUC COREO COLOMIA|youtrack tsubasa 24||Punto Notable
+24|NALDONADO|PUMTA DEL EZTE|EDIFISIO BIRASON|youtrack tsubasa 24||Punto Notable
+25|MONTEVIDEO|MONTEVIDEO|JUANQUIN DESALTERAIN 1322|youtrack tsubasa 26||Calle - Nro
+26|MONTEVIDEO|MONTEVIDEO|SALTERAIN 1322|youtrack tsubasa 26||Calle - Nro
+27|MONTEVIDEO|MONTEVIDEO|J DE SALTERAIN 1322|youtrack tsubasa 26||Calle - Nro
+28|MONTEVIDEO|MONTEVIDEO|JOAQUIN DE DE SALTERAIN 1322|youtrack tsubasa 26||Calle - Nro
+29|MONTEVIDEO|MONTEVIDEO|JOAQUIN SALTERAIN 1322|youtrack tsubasa 26||Calle - Nro
+30|MONTEVIDEO|MONTEVIDEO|JOAQUIN DE SALTERAIN 1322|youtrack tsubasa 26||Calle - Nro
+31|MONTEVIDEO|MONTEVIDEO|RIO BRANCO ESQ MERCEDES|||Calle - Nro
+32|COLONIA|COLOMIA|SUC CORREO COLONIA|youtrack tsubasa 24||Punto Notable
+33|COLONIA|COLONIA|SUC CORREO COLONIA|youtrack tsubasa 24||Punto Notable
+34|MONTEVIDEO|MONTEVIDEO|RMBL 25 DE AGOSTO 1825|youtrack tsubasa 50||Punto Notable
+35|MONTEVIDEO|MONTEVIDEO|TACUARI 4382|youtrack tsubasa 51||Calle - Nro
+36|MONTEVIDEO|MONTEVIDEO|CNO FCO. LECOCQ 1013|||Calle - Nro
+37|MONTEVIDEO|MONTEVIDEO|CNO LECOCQ 1013|||Calle - Nro
+38|MONTEVIDEO|MONTEVIDEO|BOLIVIA 1322|||Calle - Nro
+39|MONTEVIDEO|MONTEVIDEO|MANUEL MA FLORES 7880|||Calle - Nro
+40|MONTEVIDEO|MONTEVIDEO|MANUEL MELENDEZ 4454|||Calle - Nro
+41|MONTEVIDEO|MONTEVIDEO|EDIFICIO 19 DE JUNIO|||Punto Notable
+42|MONTEVIDEO|MONTEVIDEO|ENRIQUE MARTINEZ 1337|||Calle - Nro
+43|TREINTA Y TRES|CIUDAD|MANUEL FREIRE 1140|youtrack tsubasa 53||Calle - Nro
+44|TREINTA Y TRES|CIUDAD|CELEDONIO ROJAS 1543|youtrack tsubasa 53||Calle - Nro
+45|LAVALLEJA|MINAS|ARTIGAS, GRAL.|Geopostal 19||Funcionalidad
+46|CANELONES|SANTA LUCIA|CONSTITUCION 298|youtrack tsubasa 60||Funcionalidad
+47|CANELONES|SANTA LUCIA DEL ESTE|CALLE 20 CASI 21|youtrack tsubasa 60||Funcionalidad
+48|CANELONES|SANTA LUCIA DEL ESTE|CL 2 PADRON 337|youtrack tsubasa 60||Funcionalidad
+49|CANELONES|SANTA LUCIA DEL ESTE|28 M:42 S:5  CASA BLANCA 2 PISOS REJAS VERDES|youtrack tsubasa 60||Funcionalidad
+50|SAN JOSE|PLAYA PASCUAL|BOTAFOGO M42 S:11|youtrack tsubasa 61||Funcionalidad
+51|MONTEVIDEO|MONTEVIDEO|TACUAREMBO 1361|youtrack tsubasa 63||Funcionalidad
+52|MONTEVIDEO|MONTEVIDEO|HAYA DE LA TORRE 1631|youtrack tsubasa 63||Funcionalidad
+53|MONTEVIDEO|MONTEVIDEO|JOSE PEDRO VARELA 3170|youtrack tsubasa 63||Funcionalidad
+54|MONTEVIDEO|MONTEVIDEO|CL Buenos Aires Palacio de Correo|||Punto Notable
+55|MONTEVIDEO|MONTEVIDEO|CL Perez Castellano Edificio Perez Castellano|||Punto Notable
+56|MONTEVIDEO|MONTEVIDEO|CL Perez Castellano CH 171 San Vicente|||Punto Notable
+57|CANELONES|LAGOMAR|AV Gianastassio Agencia Lagomar|||Punto Notable
+58|CANELONES|LAGOMAR|AV Gianastassio MZ 35 SOLAR 3510|||Manzana - Solar
+59|CANELONES|LAGOMAR|AV Gianastassio  KM 21,500 izquierdo|||Ruta - Km.
+60|MONTEVIDEO|MONTEVIDEO|RUTA 8  KM 17500 izquierdo|||Ruta - Km.
+61|MONTEVIDEO|MONTEVIDEO|RUTA 8  ZONA FRANCA Zona América|||Entidad Colectiva
+62|MONTEVIDEO|MONTEVIDEO|RUTA 8  edificio @3|||Punto Notable
+63|MONTEVIDEO|MONTEVIDEO|CABILDO DE 1815 2323|||Calle - Nro
+64|TACUAREMBO||ZELMAR MICHELINI 992|youtrack tsubasa 73|La dir es única en el depto (loc Paso de los Toros)|Calle - Nro
+65|MONTEVIDEO|MONTEVIDEO|MINAS 1777 ESQ GALICIA|||Calle - Nro
+66|||ruta 8 km 45|||Ruta - Km.
+67|||acceso ruta 1 y 5 km 2|youtrack tsubasa 100||Ruta - Km.
+68|||SUC CORREO 25 DE MAYO|||Punto Notable
+69|Montevideo|Montevideo|Alejandro Flemming 1506||La via correcta es con una m sola|Calle - Nro
+70|Montevideo|Montevideo|RUTA KM 21700 SOLAR 5 MANZ 1 BARRIO MONARCA|Tsubasa-101|Caso de dirección deficiente|Funcionalidad
+71|Montevideo|Montevideo|RUTA KM 17500 Esq.EDIFICIO BIOTEC PZA1|Tsubasa-101|Caso de dirección deficiente|Funcionalidad
+72|Montevideo|Montevideo|RUTA KM 19 PASAJE B 10053|Tsubasa-101|Caso de dirección deficiente|Funcionalidad
+73|SAN JOSE||25 DE AGOSTO 1147|||Departamento
+74|CANELONES|LAS PIEDRAS - EL DORADO|PEREZ CASTELLANOS M. 9 S. 18|||Funcionalidad
+75|Montevideo|Montevideo|Edificio @3||Prueba sólo con el punto notable sin el nombre de la ruta.|Punto Notable
+76|Paysandu|Montevideo|LEANDRO GOMEZ 528|||Funcionalidad
+77|CANELONES|ATLANTIDA-AGUARAYBA-|CALLE 26 Y CIUDAD DE MVDEO|||Funcionalidad
+78|CANELONES|PANDO "BARRIO ESTADIO"|LOS CEIBOS Y FLORIDA S.73 M. D|||Funcionalidad
+79|CANELONES|EL DORADO|SOLIS MAN. 34 SOL. 32|||Funcionalidad
+80|MONTEVIDEO|MONTEVIDEO|yacson 1174 apt 401 esq costituyente||Prueba de diccionario|Funcionalidad
+81|MONTEVIDEO|MONTEVIDEO|zulfenden 2090 block 2 a ap 303 esq pitagoras||Prueba de diccionario|Funcionalidad
+82|MONTEVIDEO|MONTEVIDEO|hevaristo cigaanda  1340/1 ||Prueba de diccionario|Funcionalidad
+83|MONTEVIDEO|MONTEVIDEO|fraibentos 3556 ||Prueba de diccionario|Funcionalidad
+84|MONTEVIDEO|MONTEVIDEO|teniente galiano 4159 ||Prueba de diccionario|Funcionalidad
+85|CANELONES|TOLEDO|RUTA 6 KM. 23||Tsubasa esta devolviendo el radio cartero 36292 - Cerro Largo|Ruta - Km.
+86|CANELONES|LA PAZ|CESAR MAYO GUTIERREZ 39||Tsubasa esta devolviendo el codigo postal 70292 - Colonia|Calle - Nro
+87|Cerro Largo|Melo|Gral. Garibaldi 519||El punto existe, id 856819, pero tsubasa lo codifica por vecino|Funcionalidad

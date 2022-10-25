@@ -1,0 +1,4267 @@
+{
+	"info": {
+		"_postman_id": "a19d2837-d70e-4b0c-94c7-bc1c791f3cea",
+		"name": "UruguayLocal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "v0",
+			"item": [
+				{
+					"name": "SugerenciaCalleCompleta",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "15875ec2-1800-415a-8676-3b296978e17f",
+								"exec": [
+									"pm.test(\"Body is correct\", function () {",
+									"    pm.test(\"Body contains YAGUARON\", function () {",
+									"        pm.expect(pm.response.text()).to.include(\"YAGUARON\");",
+									"    });",
+									"",
+									"    pm.test(\"Body contains DOCTOR AQUILES\", function () {",
+									"        pm.expect(pm.response.text()).to.include(\"AQUILES\");",
+									"    });",
+									"    ",
+									"    var t = parseInt(pm.variables.get('tCandidatesCalle'));",
+									"    pm.test(\"Response time is less than \" + 2*t + \" ms\", function () {",
+									"        pm.expect(pm.response.responseTime).to.be.below(2*t);",
+									"    });",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v0/geocode/SugerenciaCalleCompleta?entrada=yaguarón, montevideo, montevideo&limit=10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v0",
+								"geocode",
+								"SugerenciaCalleCompleta"
+							],
+							"query": [
+								{
+									"key": "entrada",
+									"value": "yaguarón, montevideo, montevideo"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SugerenciaLocalidades",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1f1d52d6-a999-47c5-879b-c3ad9dbf7737",
+								"exec": [
+									"",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"ARROYO MONZON\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v0/geocode/localidades?alias=true&departamento=florida",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v0",
+								"geocode",
+								"localidades"
+							],
+							"query": [
+								{
+									"key": "alias",
+									"value": "true"
+								},
+								{
+									"key": "departamento",
+									"value": "florida"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SugerenciaCalleCompleta 18 de Julio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v0/geocode/SugerenciaCalleCompleta?entrada=18 de Julio, montevideo, montevideo&limit=10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v0",
+								"geocode",
+								"SugerenciaCalleCompleta"
+							],
+							"query": [
+								{
+									"key": "entrada",
+									"value": "18 de Julio, montevideo, montevideo"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda Direccion (Calle) bunos airess MONTEVIDEO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v0/geocode/BusquedaDireccion?calle=bunos airess&departamento=MONTEVIDEO&localidad=MONTEVIDEO",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v0",
+								"geocode",
+								"BusquedaDireccion"
+							],
+							"query": [
+								{
+									"key": "calle",
+									"value": "bunos airess"
+								},
+								{
+									"key": "departamento",
+									"value": "MONTEVIDEO"
+								},
+								{
+									"key": "localidad",
+									"value": "MONTEVIDEO"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda Direccion (Manzana y Solar)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v0/geocode/BusquedaDireccion?calle=manzana 103 solar 11&localidad=durazno&departamento=durazno",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v0",
+								"geocode",
+								"BusquedaDireccion"
+							],
+							"query": [
+								{
+									"key": "calle",
+									"value": "manzana 103 solar 11"
+								},
+								{
+									"key": "localidad",
+									"value": "durazno"
+								},
+								{
+									"key": "departamento",
+									"value": "durazno"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda Direccion (Punto Inmueble) Estadio Centenario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1ad332da-413d-4fd5-9f7c-2b648c5fe4c2",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"ESTADIO CENTENARIO\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v0/geocode/BusquedaDireccion?calle=estadi centenario&localidad=montevideo&departamento=montevideo",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v0",
+								"geocode",
+								"BusquedaDireccion"
+							],
+							"query": [
+								{
+									"key": "calle",
+									"value": "estadi centenario"
+								},
+								{
+									"key": "localidad",
+									"value": "montevideo"
+								},
+								{
+									"key": "departamento",
+									"value": "montevideo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda Direccion (Calle y portal) Plaza Independencia 710",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2d9db094-938d-4ec4-9a4a-4aaab6f3dcb2",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"PLAZA INDEPENDENCIA\");",
+									"    ",
+									"    pm.expect(pm.response.text()).to.include(\"710\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v0/geocode/BusquedaDireccion?calle=Plaza independencia 710&departamento=MONTEVIDEO&localidad=MONTEVIDEO",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v0",
+								"geocode",
+								"BusquedaDireccion"
+							],
+							"query": [
+								{
+									"key": "calle",
+									"value": "Plaza independencia 710"
+								},
+								{
+									"key": "departamento",
+									"value": "MONTEVIDEO"
+								},
+								{
+									"key": "localidad",
+									"value": "MONTEVIDEO"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda Direccion (Calle) gral. garibaldi melo cerro largo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "fd7c7032-8fc5-4351-90ae-846e6407565d",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"CERRO LARGO\");",
+									"    ",
+									"    pm.expect(pm.response.text()).to.include(\"GARIBALDI\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v0/geocode/BusquedaDireccion?calle=gral. garibaldi&departamento=CERRO LARGO&localidad=MELO",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v0",
+								"geocode",
+								"BusquedaDireccion"
+							],
+							"query": [
+								{
+									"key": "calle",
+									"value": "gral. garibaldi"
+								},
+								{
+									"key": "departamento",
+									"value": "CERRO LARGO"
+								},
+								{
+									"key": "localidad",
+									"value": "MELO"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Testeo Direc Unica",
+			"item": [
+				{
+					"name": "direcUnica Ignacio Uribe 2760 (Falta GENERAL)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "09333327-43a4-47dd-b618-3386e39462a1",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"ORIBE\");",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=GRAL IGNACIO URIBE 2760,MONTEVIDEO,MONTEVIDEO&limit=8",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "GRAL IGNACIO URIBE 2760,MONTEVIDEO,MONTEVIDEO"
+								},
+								{
+									"key": "limit",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "candidates Ignacio Uribe 2760",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7ca2ccd2-de0c-4b5c-8007-f728d9cc4eca",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"ORIBE\");",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/candidates?q=IGNACIO URIBE,MONTEVIDEO&limit=3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"candidates"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "IGNACIO URIBE,MONTEVIDEO"
+								},
+								{
+									"key": "limit",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "direcUnica Julio Herrer 2186, Montevideo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "04be6a09-7aee-46f8-b81e-dde0863ad8f1",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"JULIO HERRERA\");",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=JULIO HERRERA  2186,MONTEVIDEO,MONTEVIDEO&limit=1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "JULIO HERRERA  2186,MONTEVIDEO,MONTEVIDEO"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "direcUnica AV  BRASIL 2710,MONTEVIDEO,MONTEVIDEO",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8b0ba585-c125-4502-990d-cf931e19f9c3",
+								"exec": [
+									"// Deshabilito el text de lo que encuentra, en mi ordenador sale Brasil y en remoto Central",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"BRASIL\");",
+									"});",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(5 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=AVENIDA BRASIL 2710,MONTEVIDEO,MONTEVIDEO&limit=5",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "AVENIDA BRASIL 2710,MONTEVIDEO,MONTEVIDEO"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "direcUnica Avda. Petrini 535,Sarandí del Yí",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0e6a87b8-c0dd-4b04-81b4-4911a2fffef9",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"PETRINI\");",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=Avda. Petrini 535,Sarandí del Yí, Durazno&limit=1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Avda. Petrini 535,Sarandí del Yí, Durazno"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "direcUnica 25 de Agosto 935,Durazno,Durazno",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9ad9d05b-59e9-4553-bb88-d7f51e799f91",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"25 DE AGOSTO\");",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=25 de Agosto 935,Durazno,Durazno&limit=1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "25 de Agosto 935,Durazno,Durazno"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "direcUnica Artigas 640. Durazno,Durazno,Durazno",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2b810306-e969-4756-91d2-55120893ec5f",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"ARTIGAS,GRAL JOSE G\");",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=Artigas 640,Durazno,Durazno&limit=1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Artigas 640,Durazno,Durazno"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "direcUnica Darwin 178, Montevideo, Montevideo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1ef54f67-55ba-4491-8a89-e7ed4e7921bb",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"DARWIN\");",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=Darwin 178, Montevideo, Montevideo&limit=1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Darwin 178, Montevideo, Montevideo"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "direcUnica Dominguez Riera 5932 bis, Montevideo, Montevideo Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b9a0efdc-3ac1-4a42-924f-1255726e7722",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"DOMINGUEZ RIERA 5962 BIS\");",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=Dominguez Riera 5962 BIS, Montevideo, Montevideo&limit=2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Dominguez Riera 5962 BIS, Montevideo, Montevideo"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "direcUnica Dominguez Riera S/N",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3aec14a1-c234-4490-a0b9-5fd2fc6874f4",
+								"exec": [
+									"/* pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"DOMINGUEZ RIERA S/N\");",
+									"}); */",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=Dominguez Riera S/N, Montevideo, Montevideo&limit=3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Dominguez Riera S/N, Montevideo, Montevideo"
+								},
+								{
+									"key": "limit",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "direcUnica av lezica 6051",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e5393314-bfe8-4ea9-a83e-aab2ad274e64",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"AVENIDA LEZICA\");",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=AV  LEZICA 6051, MONTEVIDEO, MONTEVIDEO&limit=1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "AV  LEZICA 6051, MONTEVIDEO, MONTEVIDEO"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "direcUnica ALEJANDRO DUMAS 1663, MONTEVIDEO, MONTEVIDEO",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ab1b0c59-47c2-47d2-aefb-dd4e98deadb6",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"ALEJANDRO DUMAS\");",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=ALEJANDRO DUMAS 1663, MONTEVIDEO, MONTEVIDEO&limit=1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "ALEJANDRO DUMAS 1663, MONTEVIDEO, MONTEVIDEO"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "direcUnica AVENIDA DR CARLOS NERY 3909, MONTEVIDEO, MONTEVIDEO",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d32ef3a3-ca7c-42ee-8727-8eaa2bdb42bf",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"CARLOS NERY\");",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=AVENIDA DR CARLOS NERY 3909, MONTEVIDEO, MONTEVIDEO&limit=1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "AVENIDA DR CARLOS NERY 3909, MONTEVIDEO, MONTEVIDEO"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "direcUnica esquina Atanasio Sierra esquina Juan Spikerman, ARTIGAS (con TREINTA Y TRES NO DEVUELVE NADA, LO CUAL ES CORRECTO)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "99b0173f-818d-45db-ab59-b457757a10f3",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"ATANASIO SIERRA\");",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=Atanasio Sierra esquina Juan Spikerman, ARTIGAS, ARTIGAS&limit=1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Atanasio Sierra esquina Juan Spikerman, ARTIGAS, ARTIGAS"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pruebas Gabriela y Fabián",
+			"item": [
+				{
+					"name": "direcUnica Pasaje OLIMAR 5366",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "62c14762-9edf-4ac0-926b-2e0d64c548a6",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"PSJE OLIMAR\");",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=Psje OLIMAR 5366,MONTEVIDEO,MONTEVIDEO&limit=10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Psje OLIMAR 5366,MONTEVIDEO,MONTEVIDEO"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "direcUnica CALLE DOS 856",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8a41790f-4ccd-47cc-aacc-90f10d604240",
+								"exec": [
+									"/* pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"CALLE DOS 856\");",
+									"});*/",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=CALLE 2 856,MONTEVIDEO,MONTEVIDEO&limit=10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "CALLE 2 856,MONTEVIDEO,MONTEVIDEO"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "direcUnica dieciocho DE JULIO 2098, MONTEVIDEO, MONTEVIDEO",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "029cf65b-8916-4dfb-b643-01b266a2c7de",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[0].address).to.include(\"DIECIOCHO DE JULIO 2098\");",
+									"",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=dieciocho DE JULIO 2098, MONTEVIDEO, MONTEVIDEO&limit=10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "dieciocho DE JULIO 2098, MONTEVIDEO, MONTEVIDEO"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "direcUnica Libertad 156, Montevideo, Montevideo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ca385712-1b36-4a90-8719-183797fbbcbf",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[0].address).to.include(\"LIBERTAD 156\");",
+									"",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=Libertad 156, Montevideo, Montevideo&limit=10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Libertad 156, Montevideo, Montevideo"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Candidates Libertad 156, Montevideo, Montevideo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5a5b4754-a8c7-4e06-9fde-8080a484f0e1",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[0].address).to.include(\"LIBERTAD 156\");",
+									"",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/candidates?q=Libertad 156, Montevideo, Montevideo&limit=10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"candidates"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Libertad 156, Montevideo, Montevideo"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "direcUnica DOS DE DIECISIETE METROS 2647",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "232f7073-9195-4d11-9b5c-e0118d00dec5",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"DOS DE DIECISIETE METROS 2647\");",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[0].state).to.eql(1);",
+									"});",
+									"",
+									"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+									"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/geocode/direcUnica?q=DOS DE DIECISIETE METROS 2647,MONTEVIDEO,MONTEVIDEO&limit=10",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"geocode",
+								"direcUnica"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "DOS DE DIECISIETE METROS 2647,MONTEVIDEO,MONTEVIDEO"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Calle y Portal en SpringBoot. Ordoñez 20, Montevideo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a7d34ccc-159f-4d6b-ad43-f7e19d9652bc",
+						"exec": [
+							"pm.test(\"Encuentra CALLEyPORTAL\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"CALLEyPORTAL\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"BOULEVARD JOSE BATLLE Y ORDOÑEZ 20, MONTEVIDEO, MONTEVIDEO\");",
+							"});",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'));",
+							"pm.test(\"Response time is less than \" + 3*t + \" ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(3*t);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=ordoñez 20, montevideo, montevideo&limit=3&soloLocalidad=false",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "ordoñez 20, montevideo, montevideo"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						},
+						{
+							"key": "soloLocalidad",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calle y Portal en SpringBoot. Ignacio Dominguez Riera, 5932",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8a97bd60-cbcf-4299-a23a-bea5c5d5d948",
+						"exec": [
+							"pm.test(\"Encuentra CALLEyPORTAL\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"CALLEyPORTAL\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"IGNACIO DOMINGUEZ\");",
+							"});",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'));",
+							"pm.test(\"Response time is less than \" + 3*t + \" ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(3*t);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=domÍnguez riera 5932, montevideo, montevideo&limit=3&soloLocalidad=false",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "domÍnguez riera 5932, montevideo, montevideo"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						},
+						{
+							"key": "soloLocalidad",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calle y Portal en SpringBoot. Valparaiso 1257, Montevideo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f5afccc8-06eb-4e2f-a6b5-e0680fc5b3bb",
+						"exec": [
+							"pm.test(\"Encuentra CALLEyPORTAL\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"CALLEyPORTAL\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"VALPARAISO\");",
+							"});",
+							"var t = parseInt(pm.variables.get('tCandidatesPortal'));",
+							"pm.test(\"Response time is less than \" + 2*t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2*t);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=valparaiso 1257, montevideo",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "valparaiso 1257, montevideo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot . General Flores",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98003139-9a5e-41b6-8fd4-cf828c974349",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"AVENIDA GENERAL FLORES\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + 3*t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(3*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=GENERAL FLORES, MONTEVIDEO&limit=30",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "GENERAL FLORES, MONTEVIDEO"
+						},
+						{
+							"key": "limit",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fuzzy Yaguaron con Alias",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98003139-9a5e-41b6-8fd4-cf828c974349",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"YAGUARON\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/fuzzyGeocode?q=yaguaron, montevideo, montevideo&limit=10",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"fuzzyGeocode"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "yaguaron, montevideo, montevideo"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fuzzy Cerro Chato only localidad",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98003139-9a5e-41b6-8fd4-cf828c974349",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"CERRO CHATO\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/fuzzyGeocode?q=cerro chato, treinta y tres&soloLocalidad=true&limit=10",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"fuzzyGeocode"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "cerro chato, treinta y tres"
+						},
+						{
+							"key": "soloLocalidad",
+							"value": "true"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcUnica Boulevar Ordoñez 2009,  Montevideo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98003139-9a5e-41b6-8fd4-cf828c974349",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"BOULEVARD JOSE BATLLE Y ORDOÑEZ\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + 4*t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcUnica?q=bulevard ordoñez 2009, montevideo",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcUnica"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "bulevard ordoñez 2009, montevideo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcUnica ZUFRIATEGUI 0, PIRIAPOLIS, MALDONADO",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98003139-9a5e-41b6-8fd4-cf828c974349",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"ZUFRIATEGUI\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + 4*t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcUnica?q=ZUFRIATEGUI 70, PIRIAPOLIS, MALDONADO&LIMIT=100",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcUnica"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "ZUFRIATEGUI 70, PIRIAPOLIS, MALDONADO"
+						},
+						{
+							"key": "LIMIT",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcUnica Andresito1585,Treinta y tres",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0386bae5-ded4-47b1-baa3-97945ddd4141",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"ANDRESITO 1585\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + 4*t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcUnica?q=Andresito 1585,Treinta y tres",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcUnica"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Andresito 1585,Treinta y tres"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcUnica Rambla O Higgins",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "66d65a70-2aee-437f-9706-2c2e554f6b82",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"RAMBLA O HIGGINS\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcUnica?q=RAMBLA O'HIGGINS 5037,MONTEVIDEO,MONTEVIDEO&limit=10",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcUnica"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "RAMBLA O'HIGGINS 5037,MONTEVIDEO,MONTEVIDEO"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcUnica BVAR ESPAÑA",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a03a3829-6f00-451b-a446-78bb3cf33be0",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"BOULEVARD ESPAÑA\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcUnica?q=BVAR. España 5037,MONTEVIDEO,MONTEVIDEO&limit=10",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcUnica"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "BVAR. España 5037,MONTEVIDEO,MONTEVIDEO"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcUnica DR.EMILIO FRUGONI 1164",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7e5f5d0e-4b45-4e8e-a391-9aa08c98ea91",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"EMILIO FRUGONI\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcUnica?q=DR.EMILIO FRUGONI 1164,MONTEVIDEO,MONTEVIDEO&limit=10",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcUnica"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "DR.EMILIO FRUGONI 1164,MONTEVIDEO,MONTEVIDEO"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcUnica Pasaje OLIMAR 5366",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "62c14762-9edf-4ac0-926b-2e0d64c548a6",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"PSJE OLIMAR\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcUnica?q=Pasaje OLIMAR 5366,MONTEVIDEO,MONTEVIDEO&limit=10",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcUnica"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Pasaje OLIMAR 5366,MONTEVIDEO,MONTEVIDEO"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcUnica DR.JUAN PAULLIER 1783",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "140feede-88e2-467a-ba8f-317685e785db",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"DOCTOR JUAN PAULLIER\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcUnica?q=DR.JUAN PAULLIER 1783,MONTEVIDEO,MONTEVIDEO&limit=1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcUnica"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "DR.JUAN PAULLIER 1783,MONTEVIDEO,MONTEVIDEO"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcUnica CAMINO PASO DE MORLAN 2420",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2b13a2b5-98fe-4270-93b2-7bbbaa6517a4",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"PASO DE MORLAN\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + 4 * t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4 * t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcUnica?q=CAMINO PASO DE MORLAN 2420,MONTEVIDEO,MONTEVIDEO&limit=10",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcUnica"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "CAMINO PASO DE MORLAN 2420,MONTEVIDEO,MONTEVIDEO"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcUnica Ruta 18 km 337",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98003139-9a5e-41b6-8fd4-cf828c974349",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"BOULEVARD JOSE BATLLE Y ORDOÑEZ\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + 4*t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcUnica?q=bulevard ordoñez 2009, montevideo",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcUnica"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "bulevard ordoñez 2009, montevideo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcUnica Yaguaron ESQUINA Javier Bar Montevideo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8dab5635-07c0-4c75-8019-c59e159cb050",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"BOULEVARD JOSE BATLLE Y ORDOÑEZ\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + 4*t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcUnica?q=bulevard ordoñez 2009, montevideo",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcUnica"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "bulevard ordoñez 2009, montevideo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcUnica AV Gianastassio Agencia Lagomar, LAGOMAR, CANELONES",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98003139-9a5e-41b6-8fd4-cf828c974349",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"AGENCIA LAGOMAR\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + 4*t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcUnica?q=AV Gianastassio Agencia Lagomar, LAGOMAR, CANELONES&limit=5",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcUnica"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "AV Gianastassio Agencia Lagomar, LAGOMAR, CANELONES"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcUnica Herrera 826, durazno, dzno",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98003139-9a5e-41b6-8fd4-cf828c974349",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"LUIS ALBERTO 826\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcUnica?q=de Herrera 826, durazno, dzno&limit=10",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcUnica"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "de Herrera 826, durazno, dzno"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcUnica Manuel Meléndez 1285, Treinta y Tres, Treinta y Tres",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98003139-9a5e-41b6-8fd4-cf828c974349",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"MELENDEZ\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcUnica?q=Meléndez 1285,Treinta y Tres,Treinta y Tres",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcUnica"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Meléndez 1285,Treinta y Tres,Treinta y Tres"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcUnica Fernando Otorguez 1889, Treinta y Tres, Treinta y Tres Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98003139-9a5e-41b6-8fd4-cf828c974349",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"OTORGUES\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcUnica?q=Fernando Otorquez 1889,Treinta y Tres,Treinta y Tres",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcUnica"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Fernando Otorquez 1889,Treinta y Tres,Treinta y Tres"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcUnica cavia 2858, mdeo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98003139-9a5e-41b6-8fd4-cf828c974349",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"CAVIA 2858\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcUnica?q=cavia 2858, mdeo",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcUnica"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "cavia 2858, mdeo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates Juan Mendez Montevideo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "98003139-9a5e-41b6-8fd4-cf828c974349",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"JUAN MENDEZ\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=Juan Mendez, Montevideo&limit=20",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Juan Mendez, Montevideo"
+						},
+						{
+							"key": "limit",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "health",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "30d6462f-1452-4a94-bfea-d6860f96517e",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"UP\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/actuator/custom-health",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"actuator",
+						"custom-health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Avda 18 de Julio, Montevideo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "79233d12-9737-4db3-9b28-f6138fde5fc4",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"AVENIDA DIECIOCHO DE JULIO, MONTEVIDEO, MONTEVIDEO\");",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=avda 18 de julio, montevideo, montevideo&limit=100",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "avda 18 de julio, montevideo, montevideo"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Centenario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d26f336a-4db9-41bf-8a07-65300dd4b3c3",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"ESTADIO CENTENARIO\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesPOI'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=estadio centena",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "estadio centena"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Dr Jose F Arias, montevideo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b2a21ac7-dde0-4c19-975a-873f4e7fb3b8",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"JOSE F ARIAS\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + (3*t) + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(3*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=DOCTOR JOSE FRANCISCO ARIAS 6880, montevideo, montevideo",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "DOCTOR JOSE FRANCISCO ARIAS 6880, montevideo, montevideo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  CN CONT DE LA CHIMENEA 6639 , MONTEVIDEO,MONTEVIDEO",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "99e37ab8-04be-43d9-bb6e-02d94ef70b54",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"DE LA CHIMENEA\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesPOI'))",
+							"pm.test(\"Response time is less than \" + (2*t) + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=CN CONT DE LA CHIMENEA 6639 , MONTEVIDEO,MONTEVIDEO",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "CN CONT DE LA CHIMENEA 6639 , MONTEVIDEO,MONTEVIDEO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  CNO LA BOYADA 2068",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ff625409-0374-465d-8bd1-d35036dbd5db",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"LA BOYADA\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesPOI'))",
+							"pm.test(\"Response time is less than \" + (2*t) + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(2*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=CNO LA BOYADA 2068 , MONTEVIDEO,MONTEVIDEO",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "CNO LA BOYADA 2068 , MONTEVIDEO,MONTEVIDEO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  14 DE JULIO",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "09f83644-a6aa-47a2-b99a-0891a0accb54",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"CATORCE DE JULIO\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + (3*t) + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(3*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=14 DE JULIO 1516, MONTEVIDEO, MONTEVIDEO",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "14 DE JULIO 1516, MONTEVIDEO, MONTEVIDEO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates (solo localidad) La Calera",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d26f336a-4db9-41bf-8a07-65300dd4b3c3",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"LA CALERA\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=la calera&soloLocalidad=true",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "la calera"
+						},
+						{
+							"key": "soloLocalidad",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Manzana y Solar",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3eccf3ed-ec15-415b-8201-0aa383e57ffd",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"MANZANA 243 SOLAR 20\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesManza'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=MANZANA 243 SOLAR 20, PAYSANDU, PAYSANDU&limit=100",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "MANZANA 243 SOLAR 20, PAYSANDU, PAYSANDU"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Ruta 5 y Km 23",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "233ef624-1d6e-48ad-84d1-d3dedd1df262",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"RUTA 5 \");",
+							"});",
+							"",
+							"var tRuta = parseInt( pm.variables.get('tRuta') );",
+							"pm.test(\"Response time is less than tRuta ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below( tRuta );",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=RUTA 5 KM. 23&limit=100",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "RUTA 5 KM. 23"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Ruta 8 y Km 123",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "233ef624-1d6e-48ad-84d1-d3dedd1df262",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"RUTA 8\");",
+							"    pm.expect(pm.response.text()).to.include(\"KM 123\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tRuta'));",
+							"pm.test(\"Response time is less than \" + t + \" ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=RUTA 8 KM. 123",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "RUTA 8 KM. 123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Palacio Legislativo (Punto Inmueble)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b210437a-7a85-4972-bd2f-0554953a6b09",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"PALACIO LEGISLATIVO\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesPOI'));",
+							"pm.test(\"Response time is less than tCandidatesPOI\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=palacio&limit=100",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "palacio"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Rambla Republica del Peru",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cd02a276-e522-4179-bf62-1203632a5b7d",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"RAMBLA REPUBLICA DEL PERU\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + 4*t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(4*t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=rambla republica del peru&limit=100",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "rambla republica del peru"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  plaza independencia 710",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c0ba1a73-aab6-4620-93c6-3656a0a80bbf",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"PLAZA INDEPENDENCIA 710\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesPOI'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=plaza independencia 710, montevideo, montevideo&limit=100",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "plaza independencia 710, montevideo, montevideo"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Capas Poligonales",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7a84e929-c2b2-492a-965c-0a1f64c41d4a",
+						"exec": [
+							"pm.test(\"Más de 5 capas poligonales\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.length).gt(5);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/capasPoligonales",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"capasPoligonales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "poligono -> Portales dentro de departamento",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "64ec9f39-90cb-4610-9f6e-b25c9dae85d5",
+						"exec": [
+							"pm.test(\"Máximo numero de registros 100\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.length).eq(100);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/poligono?capa=departamento&id=1&tipoDirec=portal&limit=100",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"poligono"
+					],
+					"query": [
+						{
+							"key": "capa",
+							"value": "departamento"
+						},
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "tipoDirec",
+							"value": "portal"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  ESQUINAS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ee5617b5-d8d5-46ae-8d91-3ee64aba4b4b",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"ESQUINA\");",
+							"    ",
+							"    pm.expect(pm.response.text()).to.include(\"YAGUARON\");",
+							"    ",
+							"    pm.expect(pm.response.text()).to.include(\"JAVIER BARRIOS\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesEsquina'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=yaguaron esquina javier bar, montevideo, montevideo&limit=10",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "yaguaron esquina javier bar, montevideo, montevideo"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates con Portal en SpringBoot ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e079340e-a255-4ae3-b42c-4af9991f531a",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"CALLEyPORTAL\");",
+							"    ",
+							"    pm.expect(pm.response.text()).to.include(\"AVENIDA JOSE BATLLE Y ORDOÑEZ 24\");",
+							"    ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=ordoñez 24, montevideo",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "ordoñez 24, montevideo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swagger",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ec91ae0f-81c5-4cfe-ae66-e5da0c3b9e71",
+						"exec": [
+							"pm.test(\"Status code is 200. Swagger está disponible\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/swagger-ui.html",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"swagger-ui.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reverse Geocode",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cfc00430-7d4d-4ef7-accc-bd9c1f0497b9",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"YAGUARON 1478\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tReverseGeocode'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/reverse?longitud=-56.1881599&latitud=-34.9032784&limit=10",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"reverse"
+					],
+					"query": [
+						{
+							"key": "longitud",
+							"value": "-56.1881599"
+						},
+						{
+							"key": "latitud",
+							"value": "-34.9032784"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find exact calle",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8a9474ee-6437-48d2-b96a-c9950908c81d",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"YAGUARON, MONTEVIDEO, MONTEVIDEO\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + t + \" ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/find?type=calle&nomvia=YAGUARON&departamento=MONTEVIDEO&localidad=MONTEVIDEO",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"find"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "calle"
+						},
+						{
+							"key": "nomvia",
+							"value": "YAGUARON"
+						},
+						{
+							"key": "departamento",
+							"value": "MONTEVIDEO"
+						},
+						{
+							"key": "localidad",
+							"value": "MONTEVIDEO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find exact calle y portal",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "52036d45-b82a-433e-bea3-b18e142962a8",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"YAGUARON 1699\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesPortal'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/find?type=calle&nomvia=YAGUARON&portal=1699&departamento=MONTEVIDEO&localidad=MONTEVIDEO",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"find"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "calle"
+						},
+						{
+							"key": "nomvia",
+							"value": "YAGUARON"
+						},
+						{
+							"key": "portal",
+							"value": "1699"
+						},
+						{
+							"key": "departamento",
+							"value": "MONTEVIDEO"
+						},
+						{
+							"key": "localidad",
+							"value": "MONTEVIDEO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find exact calle y portal por ID CALLE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f5942726-9e22-495a-a0b5-fba01d97e56e",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"PLAZA INDEPENDENCIA 710\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/find?type=calle&portal=710&idcalle=8770",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"find"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "calle"
+						},
+						{
+							"key": "nomvia",
+							"value": "YAGUARON",
+							"disabled": true
+						},
+						{
+							"key": "departamento",
+							"value": "MONTEVIDEO",
+							"disabled": true
+						},
+						{
+							"key": "localidad",
+							"value": "MONTEVIDEO",
+							"disabled": true
+						},
+						{
+							"key": "portal",
+							"value": "710"
+						},
+						{
+							"key": "idcalle",
+							"value": "8770"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find exact calle y portal Dominguez Riera 5932 bis",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "df73126b-9fef-4da5-88f4-dd4ed3efcb77",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"IGNACIO DOMINGUEZ RIERA 5990 BIS\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/find?type=calle&letra=BIS&idcalle=14124&portal=5990",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"find"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "calle"
+						},
+						{
+							"key": "nomvia",
+							"value": "YAGUARON",
+							"disabled": true
+						},
+						{
+							"key": "departamento",
+							"value": "MONTEVIDEO",
+							"disabled": true
+						},
+						{
+							"key": "localidad",
+							"value": "MONTEVIDEO",
+							"disabled": true
+						},
+						{
+							"key": "letra",
+							"value": "BIS"
+						},
+						{
+							"key": "idcalle",
+							"value": "14124"
+						},
+						{
+							"key": "portal",
+							"value": "5990"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates Dominguez Riera 5932 bis",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "48bf11c1-f16d-469d-84e6-464cfbfe72d1",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    // pm.expect(pm.response.text()).to.include(\"IGNACIO DOMINGUEZ RIERA 5932 BIS\");",
+							"});",
+							"",
+							"pm.test(\"Tipo Portal\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData[0].type).to.eql('CALLEyPORTAL');",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=dominguez riera 5932 bis",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "nomvia",
+							"value": "YAGUARON",
+							"disabled": true
+						},
+						{
+							"key": "departamento",
+							"value": "MONTEVIDEO",
+							"disabled": true
+						},
+						{
+							"key": "localidad",
+							"value": "MONTEVIDEO",
+							"disabled": true
+						},
+						{
+							"key": "q",
+							"value": "dominguez riera 5932 bis"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates Dominguez Riera S/N",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8212ce53-2bbd-4a53-9d77-9ad8b971a3c5",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    // pm.expect(pm.response.text()).to.include(\"IGNACIO DOMINGUEZ RIERA S/N\");",
+							"});",
+							"",
+							"pm.test(\"Tipo Portal\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData[0].type).to.eql('CALLEyPORTAL');",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=dominguez riera s/n",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "nomvia",
+							"value": "YAGUARON",
+							"disabled": true
+						},
+						{
+							"key": "departamento",
+							"value": "MONTEVIDEO",
+							"disabled": true
+						},
+						{
+							"key": "localidad",
+							"value": "MONTEVIDEO",
+							"disabled": true
+						},
+						{
+							"key": "q",
+							"value": "dominguez riera s/n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find exact calle por ID CALLE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "198d388a-4c46-4fa2-93d9-7d415d8dc603",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"25735\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/find?type=calle&idcalle=25735",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"find"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "calle"
+						},
+						{
+							"key": "nomvia",
+							"value": "YAGUARON",
+							"disabled": true
+						},
+						{
+							"key": "departamento",
+							"value": "MONTEVIDEO",
+							"disabled": true
+						},
+						{
+							"key": "localidad",
+							"value": "MONTEVIDEO",
+							"disabled": true
+						},
+						{
+							"key": "idcalle",
+							"value": "25735"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Esquinas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "947547b4-eb62-468f-bfb3-dd9623ec6724",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"ESQUINA\");",
+							"    ",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.length).gt(10);",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesEsquina'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/findEsq?idcalle=9372",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"findEsq"
+					],
+					"query": [
+						{
+							"key": "idcalle",
+							"value": "9372"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ruta 18 Km 330",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "947547b4-eb62-468f-bfb3-dd9623ec6724",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"RUTA\");",
+							"    ",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesEsquina'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/rutakm?ruta=7&km=34",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"rutakm"
+					],
+					"query": [
+						{
+							"key": "ruta",
+							"value": "7"
+						},
+						{
+							"key": "km",
+							"value": "34"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcManzaSolar",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "80a4acf3-a97c-466e-8ef5-cc475322102a",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"MANZANAySOLAR\");",
+							"    ",
+							"    pm.expect(pm.response.text()).to.include(\"MANZANA 243 SOLAR 20, PAYSANDU, PAYSANDU\");",
+							"    ",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesManza'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcManzaSolar?departamento=paysandu&localidad=paysandu&manzana=243&solar=20",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcManzaSolar"
+					],
+					"query": [
+						{
+							"key": "departamento",
+							"value": "paysandu"
+						},
+						{
+							"key": "localidad",
+							"value": "paysandu"
+						},
+						{
+							"key": "manzana",
+							"value": "243"
+						},
+						{
+							"key": "solar",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "direcPadron",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cb4fff73-8fcd-4c49-830c-0b0b63e515c2",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"MANZANAySOLAR\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcPadron?departamento=Cerro Largo&localidad=Melo&padron=562",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcPadron"
+					],
+					"query": [
+						{
+							"key": "departamento",
+							"value": "Cerro Largo"
+						},
+						{
+							"key": "localidad",
+							"value": "Melo"
+						},
+						{
+							"key": "padron",
+							"value": "562"
+						}
+					]
+				},
+				"description": "Ojo, no encuentro nada en Montevideo!!"
+			},
+			"response": []
+		},
+		{
+			"name": "direcPuntoNotable",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5c7e6e09-caed-4df0-8f8e-58a2bbce592e",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"POI\");",
+							"    ",
+							"    pm.expect(pm.response.text()).to.include(\"CORREO\");",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesPOI'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/direcPuntoNotable?departamento=Cerro Largo&nombre=Correos",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"direcPuntoNotable"
+					],
+					"query": [
+						{
+							"key": "departamento",
+							"value": "Cerro Largo"
+						},
+						{
+							"key": "nombre",
+							"value": "Correos"
+						}
+					]
+				},
+				"description": "Ojo, no encuentro nada en Montevideo!!"
+			},
+			"response": []
+		},
+		{
+			"name": "Cruces con Radio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "64a797b9-94a6-40e3-ad12-c52fcdc555d9",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"ESQUINA\");",
+							"    ",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/crucesConRadio?departamento=montevideo&localidad=montevideo&calle=yaguaron&latitud=-34.89443988158456&longitud=-56.18754395221193&radio=1000&limit=200",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"crucesConRadio"
+					],
+					"query": [
+						{
+							"key": "departamento",
+							"value": "montevideo"
+						},
+						{
+							"key": "localidad",
+							"value": "montevideo"
+						},
+						{
+							"key": "calle",
+							"value": "yaguaron"
+						},
+						{
+							"key": "latitud",
+							"value": "-34.89443988158456"
+						},
+						{
+							"key": "longitud",
+							"value": "-56.18754395221193"
+						},
+						{
+							"key": "radio",
+							"value": "1000"
+						},
+						{
+							"key": "limit",
+							"value": "200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Con LOCALIDAD",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a1521823-9452-4841-91f8-40e81bb6cd60",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"CANELONES\");",
+							"    ",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=Canelones, canelo&soloLocalidad=true&limit=10",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Canelones, canelo"
+						},
+						{
+							"key": "soloLocalidad",
+							"value": "true"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Candidates en SpringBoot  Yaguaron, Ciudad de la Costa, Canelones",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "28d8b0ce-6dc4-47b0-8114-5cdf045bb401",
+						"exec": [
+							"pm.test(\"Yaguaron, Ciudad de la Costa\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"YAGUARON, CIUDAD DE LA COSTA\");",
+							"    ",
+							"});",
+							"",
+							"var t = parseInt(pm.variables.get('tCandidatesCalle'))",
+							"pm.test(\"Response time is less than \" + t + \" msecs\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(t);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/geocode/candidates?q=yaguaron, ciudad de la costa, canelones&limit=10",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"geocode",
+						"candidates"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "yaguaron, ciudad de la costa, canelones"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

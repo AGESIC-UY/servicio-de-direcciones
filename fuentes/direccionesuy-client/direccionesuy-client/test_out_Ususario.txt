@@ -1,0 +1,4 @@
+ID;ENTRADA_USUARIO;DIRECCION;X;Y
+1;cavia 2858, mvd;LUIS B CAVIA 2858, MONTEVIDEO, MONTEVIDEO;xxxxxxxxxxx;yyyyyyyyyyyyy
+2;herrera 826, durazno, dzno;DE HERRERA, DR. LUIS ALBERTO 826, DURAZNO, DURAZNO;xxxxxxxxxxx;yyyyyyyyyyyyy
+3;palacio legisislativ, montevideo, montevideo;PALACIO LEGISLATIVO - AVENIDA DE LAS LEYES, MONTEVIDEO, MONTEVIDEO;xxxxxxxxxxx;yyyyyyyyyyyyy
